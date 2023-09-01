@@ -1,8 +1,9 @@
-.navbar {
-  border: 1px solid green;
+nav {
+  /* border: 1px solid green;
   display: flex;
   justify-content: flex-end;
-  gap: 20px;
+  gap: 20px; */
+  background-color: red;
 }
 
 .navbar a {
