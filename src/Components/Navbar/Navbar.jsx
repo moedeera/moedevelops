@@ -7,11 +7,11 @@ export const Navbar = () => {
       <div className="flex items-center justify-between">
         {" "}
         <div className="hidden md:block">
-          <h3 className="bold">
+          <h1 style={{ fontWeight: "900" }}>
             <Link to={"/"}>
               Moe<span className="text-primary">Develops</span>
             </Link>
-          </h3>
+          </h1>
         </div>
         <div className=" md:hidden">
           <img src={menu} alt="menu" />
@@ -27,7 +27,7 @@ export const Navbar = () => {
           <Link to={"/about"}>About</Link>
         </div>
         <div className="md:hidden">
-          <h3>
+          <h3 style={{ fontWeight: "900" }}>
             <Link to={"/"}>
               Moe<span className="text-primary">Develops</span>
             </Link>
