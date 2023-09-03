@@ -52,14 +52,19 @@ export const Navbar = () => {
           </Link>
         </div>
       </div>
-      {mobileMenu && (
-        <nav className="absolute w-full p-6 left-0 top-24 h-96 flex justify-evenly flex-col border md:hidden">
-          <Link to={"/"}>Home</Link>
-          <Link to={"/portfolio"}>Portfolio</Link>
-          <Link to={"/about"}>About</Link>
-          <Link to={"/contact"}>Contact</Link>
-        </nav>
-      )}
+
+      <nav
+        className={
+          mobileMenu
+            ? "mobilenav shownav absolute w-full p-6 left-0 top-24 h-96 flex justify-evenly flex-col border md:hidden"
+            : "mobilenav hidenav absolute w-full p-6 left-0 top-24 h-96 flex justify-evenly flex-col border md:hidden"
+        }
+      >
+        <Link to={"/"}>Home</Link>
+        <Link to={"/portfolio"}>Portfolio</Link>
+        <Link to={"/about"}>About</Link>
+        <Link to={"/contact"}>Contact</Link>
+      </nav>
     </nav>
   );
 };
