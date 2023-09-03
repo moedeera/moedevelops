@@ -16,7 +16,7 @@ export const Navbar = () => {
         <div className=" md:hidden">
           <img src={menu} alt="menu" />
         </div>
-        <div className="hidden md:flex gap-x-2.5">
+        <div className="hidden md:flex gap-x-3.5">
           {" "}
           <Link to={"/"}>
             <p>Portfolio</p>
@@ -40,6 +40,12 @@ export const Navbar = () => {
           </Link>
         </div>
       </div>
+      <nav className="absolute w-full left-0 top-0 h-full flex flex-col border">
+        <Link to={"/"}>Home</Link>
+        <Link to={"/portfolio"}>Portfolio</Link>
+        <Link to={"/about"}>About</Link>
+        <Link to={"/contact"}>Contact</Link>
+      </nav>
     </nav>
   );
 };
