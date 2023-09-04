@@ -27,6 +27,9 @@ nav {
   opacity: 0;
 }
 
+.img {
+  max-width: 35px;
+}
 @keyframes fadeInFromLeft {
   0% {
     transform: translateX(-100%);

@@ -23,17 +23,29 @@ export const Navbar = () => {
             </Link>
           </h1>
         </div>
-        <div
-          className=" md:hidden cursor-pointer"
-          onClick={() => {
-            showMobileMenu(!mobileMenu);
-          }}
-        >
-          {mobileMenu ? (
-            <img src={close} alt="menu" />
-          ) : (
-            <img src={menu} alt="menu" />
-          )}
+        <div className="flex items-center gap-3.5 md:hidden ">
+          <div
+            className=" cursor-pointer"
+            onClick={() => {
+              showMobileMenu(!mobileMenu);
+            }}
+          >
+            {" "}
+            {mobileMenu ? (
+              <img className="img" src={close} alt="close" />
+            ) : (
+              <img className="img" src={menu} alt="menu" />
+            )}
+          </div>
+
+          <div>
+            {" "}
+            <h1 style={{ fontWeight: "900" }}>
+              <Link to={"/"}>
+                Moe<span className="text-primary">Develops</span>
+              </Link>
+            </h1>
+          </div>
         </div>
         <div className="hidden md:flex gap-x-3.5">
           {" "}
@@ -45,18 +57,12 @@ export const Navbar = () => {
           </Link>
           <Link to={"/about"}>About</Link>
         </div>
-        <div className="md:hidden">
+        <div>
           <h3 style={{ fontWeight: "900" }}>
-            <Link to={"/"}>
-              Moe<span className="text-primary">Develops</span>
+            <Link to={"/login"} className="text-red">
+              <button className="btn">Contact</button>
             </Link>
           </h3>
-        </div>
-        <div className="hidden md:flex gap-x-2.5">
-          {" "}
-          <Link to={"/login"} className="text-red">
-            <button className="btn">Contact</button>
-          </Link>
         </div>
       </div>
 
