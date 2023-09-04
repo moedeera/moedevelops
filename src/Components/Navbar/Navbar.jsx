@@ -5,6 +5,13 @@ import close from "./close.png";
 import { useState } from "react";
 export const Navbar = () => {
   const [mobileMenu, showMobileMenu] = useState(false);
+
+  const menuItems = [
+    { name: "Home", link: "/" },
+    { name: "Portfolio", link: "/portfolio" },
+    { name: "Contact", link: "/contact" },
+    { name: "About", link: "/about" },
+  ];
   return (
     <nav className="relative  p-6 h-24 mx-auto text-black w-full">
       <div className="flex items-center justify-between">
@@ -60,10 +67,19 @@ export const Navbar = () => {
             : "mobilenav hidenav absolute w-full p-6 left-0 top-24 h-96 flex justify-evenly flex-col border md:hidden"
         }
       >
-        <Link to={"/"}>Home</Link>
-        <Link to={"/portfolio"}>Portfolio</Link>
-        <Link to={"/about"}>About</Link>
-        <Link to={"/contact"}>Contact</Link>
+        {menuItems.map((item) => (
+          <>
+            <Link
+              to={`${item.link}`}
+              key={item.name}
+              onClick={() => {
+                showMobileMenu(false);
+              }}
+            >
+              {item.name}
+            </Link>
+          </>
+        ))}
       </nav>
     </nav>
   );
