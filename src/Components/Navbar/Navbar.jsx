@@ -65,28 +65,29 @@ export const Navbar = () => {
           </h3>
         </div>
       </div>
-
-      <nav
-        className={
-          mobileMenu
-            ? "mobilenav shownav absolute w-full p-6 left-0 top-24 h-96 flex justify-evenly flex-col border md:hidden"
-            : "mobilenav hidenav absolute w-full p-6 left-0 top-24 h-96 flex justify-evenly flex-col border md:hidden"
-        }
-      >
-        {menuItems.map((item) => (
-          <>
-            <Link
-              to={`${item.link}`}
-              key={item.name}
-              onClick={() => {
-                showMobileMenu(false);
-              }}
-            >
-              {item.name}
-            </Link>
-          </>
-        ))}
-      </nav>
+      <div className="backdrop">
+        <nav
+          className={
+            mobileMenu
+              ? "mobilenav shownav absolute w-full p-6 left-0 top-24 h-96 flex justify-evenly flex-col border md:hidden"
+              : "mobilenav hidenav absolute w-full p-6 left-0 top-24 h-96 flex justify-evenly flex-col border md:hidden"
+          }
+        >
+          {menuItems.map((item) => (
+            <>
+              <Link
+                to={`${item.link}`}
+                key={item.name}
+                onClick={() => {
+                  showMobileMenu(false);
+                }}
+              >
+                {item.name}
+              </Link>
+            </>
+          ))}
+        </nav>
+      </div>
     </nav>
   );
 };
