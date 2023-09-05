@@ -6,18 +6,22 @@
 
 .carousel {
   display: flex;
-  transition: left 0.5s;
+  gap: 15px;
+  background-color: white;
 }
 
 .carousel-item {
-  width: 200px;
-  height: 400px;
+  width: 35%;
+  min-width: 185px;
+  max-width: 350px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
+  border-radius: 5px;
 }
 
 .carousel-item h1 {
