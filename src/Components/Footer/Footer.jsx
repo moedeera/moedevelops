@@ -13,7 +13,7 @@ export const Footer = () => {
   ];
   return (
     <div className="footer">
-      <div>
+      <div className="upper-footer">
         <div>
           <h1 style={{ fontWeight: "900" }}>
             <Link to={"/"}>
@@ -21,7 +21,7 @@ export const Footer = () => {
             </Link>
           </h1>
         </div>
-        <div>
+        <div className="flex justify-between w-80">
           {" "}
           {menuItems.map((item) => (
             <>
@@ -32,7 +32,7 @@ export const Footer = () => {
           ))}
         </div>
 
-        <div>
+        <div className="flex ">
           <img src={twitterLogo} alt="twitter" />
           <img src={linkedinLogo} alt="linkedin" />
           <img src={mediumLogo} alt="medium" />

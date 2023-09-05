@@ -1,4 +1,19 @@
 .footer {
   background-color: white;
   color: black;
+  padding: 5px 30px;
+}
+
+.upper-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 20px 0px;
+}
+@media only screen and (min-width: 600px) {
+  .upper-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
