@@ -10,6 +10,8 @@
   gap: 10px;
   align-items: center;
   padding: 20px 0px;
+  width: 80%;
+  margin: 0 auto;
 }
 @media only screen and (min-width: 600px) {
   .upper-footer {

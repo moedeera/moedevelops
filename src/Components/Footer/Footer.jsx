@@ -38,7 +38,7 @@ export const Footer = () => {
           <img src={mediumLogo} alt="medium" />
         </div>
       </div>
-      <div></div>
+      <div className="flex justify-center p-6"> © MoeDevelops 2023</div>
     </div>
   );
 };
