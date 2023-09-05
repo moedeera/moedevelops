@@ -1,0 +1,26 @@
+.carousel-container {
+  width: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  transition: left 0.5s;
+}
+
+.carousel-item {
+  width: 200px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.carousel-item h1 {
+  margin: 0;
+  padding: 10px;
+}
