@@ -20,7 +20,7 @@
   background-color: #ffda79;
   padding: 10px;
   border-radius: 15px;
-  font-size: medium;
+  font-size: small;
   color: rgb(3, 3, 33);
   font-weight: 500;
 }
@@ -28,4 +28,10 @@
 .landing p {
   font-size: medium;
   font-weight: 500;
+}
+
+@media only screen and (min-width: 600px) {
+  .landing small {
+    font-size: medium;
+  }
 }
