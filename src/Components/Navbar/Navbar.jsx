@@ -13,7 +13,7 @@ export const Navbar = () => {
     { name: "About", link: "/about" },
   ];
   return (
-    <nav className="relative  p-6 h-24 mx-auto text-black w-full overflow-hidden">
+    <nav className="relative  p-3 h-24 mx-auto text-black w-full overflow-hidden md:p-6">
       <div className="flex items-center justify-between">
         {" "}
         <div className="hidden md:block">
