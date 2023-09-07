@@ -57,6 +57,7 @@
   justify-content: flex-start;
   padding: 20px;
   text-transform: capitalize;
+  opacity: 0;
 }
 .item-info:hover {
   opacity: 1;
