@@ -1,11 +1,11 @@
 .landing {
-  /* border: 1px solid green; */
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   text-align: center;
-  height: 65vh;
+  height: 60vh;
   gap: 25px;
-  padding: 50px 0px 30px;
+  padding: 50px 0px 20px;
   color: black;
   background-color: white;
 }

@@ -30,11 +30,23 @@ export const Navbar = () => {
                 showMobileMenu(!mobileMenu);
               }}
             >
-              {mobileMenu ? (
+              {/* {mobileMenu ? (
                 <img className="img" src={close} alt="close" />
               ) : (
-                <img className="img" src={menu} alt="menu" />
-              )}
+                // <img className="img menu-icon" src={menu} alt="menu" />
+                <div className="menu-icon">
+                  <div className="long-bar-1"></div>
+                  <div className="long-bar-2"></div>
+                  <div className="short-bar"></div>
+                </div>
+              )} */}
+              <div className="btn-control">
+                <div className="internal-container">
+                  <div
+                    className={mobileMenu ? "menu-bar menu-show" : "menu-bar"}
+                  ></div>
+                </div>
+              </div>
             </div>
 
             <div>
@@ -78,7 +90,11 @@ export const Navbar = () => {
                 onClick={() => {
                   showMobileMenu(false);
                 }}
-                className="carouselItem"
+                className={
+                  mobileMenu
+                    ? "carouselItem item-show"
+                    : "carouselItem item-hide"
+                }
               >
                 {item.name}
               </Link>

@@ -18,13 +18,23 @@ nav {
 }
 
 .shownav {
-  /* transform: translateX(0%); */
   opacity: 1;
 }
 
 .hidenav {
-  /* transform: translateX(-100%); */
   opacity: 0;
+}
+
+.carouselItem {
+  transition: all 0.35s ease-in-out;
+}
+
+.item-hide {
+  transform: translateX(-100%);
+}
+
+.item-show {
+  transform: translateX(0%);
 }
 
 .img {
@@ -43,6 +53,77 @@ nav {
 }
 .carouselItem {
   animation: fadeInFromLeft 0.35s ease-in-out 0.1s;
+}
+
+.menu-icon {
+  height: 50px;
+  width: 50px;
+  border: 1px solid green;
+  position: relative;
+}
+
+.long-bar-1 {
+}
+.long-bar-2 {
+}
+.short-bar {
+}
+
+.btn-control {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border-radius: 5px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aliceblue; */
+}
+.internal-container {
+  position: relative;
+  height: 55px;
+  width: 55px;
+
+  top: 0%;
+  left: 60%;
+  transform: translate(-50%, 50%);
+  /* padding-left: 10px; */
+}
+.menu-bar {
+  height: 1.5px;
+  width: 30%;
+  background-color: black;
+  transition: all 0.5s ease-in-out;
+  padding-left: 10px;
+}
+.menu-bar::before,
+.menu-bar::after {
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 0%;
+  width: 50%;
+  height: 1.5px;
+  transition: all 0.5s ease-in-out;
+  background-color: black;
+}
+.menu-bar::after {
+  transform: translateY(-10px);
+}
+.menu-bar::before {
+  transform: translateY(10px);
+}
+
+.menu-bar.menu-show {
+  background-color: transparent;
+}
+.menu-bar.menu-show::after {
+  transform: rotate(45deg) translate(2px, -2px);
+  opacity: 1 !important;
+}
+.menu-bar.menu-show::before {
+  transform: rotate(-45deg) translate(2px, 2px);
 }
 
 @keyframes fadeInFromLeft {

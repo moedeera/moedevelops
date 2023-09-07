@@ -17,7 +17,7 @@ export const Footer = () => {
         <div>
           <h1 style={{ fontWeight: "900" }}>
             <Link to={"/"}>
-              <span className="text-black">Moe</span>{" "}
+              <span className="text-black">Moe</span>
               <span className="text-primary">Develops</span>
             </Link>
           </h1>
