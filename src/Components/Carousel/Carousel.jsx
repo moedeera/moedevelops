@@ -63,10 +63,10 @@ export const Carousel = () => {
               backgroundImage: `url("${item.image}")`,
             }}
           >
-            <h1>.</h1>
-            {/* <div className="carousel-overlay">
-              <img src={images[index]} alt="" />
-            </div> */}
+            <div className="item-info">
+              <h3>{item.name} Website</h3>
+              <div className="icons"></div>
+            </div>
           </div>
         ))}
       </div>

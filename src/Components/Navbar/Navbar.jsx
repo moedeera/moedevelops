@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import menu from "./navbar.png";
-import close from "./close.png";
+
 import { useState } from "react";
 export const Navbar = () => {
   const [mobileMenu, showMobileMenu] = useState(false);
@@ -30,16 +29,6 @@ export const Navbar = () => {
                 showMobileMenu(!mobileMenu);
               }}
             >
-              {/* {mobileMenu ? (
-                <img className="img" src={close} alt="close" />
-              ) : (
-                // <img className="img menu-icon" src={menu} alt="menu" />
-                <div className="menu-icon">
-                  <div className="long-bar-1"></div>
-                  <div className="long-bar-2"></div>
-                  <div className="short-bar"></div>
-                </div>
-              )} */}
               <div className="btn-control">
                 <div className="internal-container">
                   <div
