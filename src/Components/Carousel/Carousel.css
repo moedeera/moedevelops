@@ -33,6 +33,7 @@
   background-position: center;
   background-size: cover;
   border: 2px solid rgba(128, 128, 128, 0.411);
+  overflow: hidden;
 }
 
 .carousel-overlay {
