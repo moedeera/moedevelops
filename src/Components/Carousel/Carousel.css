@@ -15,9 +15,10 @@
   animation-play-state: paused;
 }
 .carousel-item {
-  width: 35%;
+  position: relative;
+  width: 45%;
   min-width: 250px;
-  max-width: 300px;
+  max-width: 350px;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -27,10 +28,18 @@
   color: white;
   border-radius: 10px;
   transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 2px solid rgba(128, 128, 128, 0.411);
 }
 
-.carousel-item:hover {
-  transform: scale(1.075);
+.carousel-overlay {
+  /* border: 1px solid red; */
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 .carousel-item h1 {
   margin: 0;
@@ -52,4 +61,6 @@
   100% {
     transform: translateX(0%);
   }
+}
+@media only screen and (min-width: 600px) {
 }

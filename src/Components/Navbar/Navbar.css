@@ -18,12 +18,12 @@ nav {
 }
 
 .shownav {
-  transform: translateX(0%);
+  /* transform: translateX(0%); */
   opacity: 1;
 }
 
 .hidenav {
-  transform: translateX(-100%);
+  /* transform: translateX(-100%); */
   opacity: 0;
 }
 
@@ -31,15 +31,20 @@ nav {
   max-width: 30px;
 }
 .backdrop {
-  /* position: fixed;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(128, 128, 128, 0.792);
   height: 100vh;
-  background: red;
   width: 100%;
   left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; */
 }
+.carouselItem {
+  animation: fadeInFromLeft 0.35s ease-in-out 0.1s;
+}
+
 @keyframes fadeInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -49,5 +54,10 @@ nav {
   100% {
     transform: translateX(0%);
     opacity: 1;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .overlay {
+    display: none;
   }
 }
