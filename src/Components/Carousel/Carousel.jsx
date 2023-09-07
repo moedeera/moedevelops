@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./Carousel.css";
 export const Carousel = () => {
   const items = [
@@ -9,25 +8,17 @@ export const Carousel = () => {
     { name: "green" },
     { name: "purple" },
     { name: "orange" },
+    { name: "teal" },
   ];
-  const [isAnimating, setIsAnimating] = useState(true);
 
   return (
     <div>
-      <div
-        className={`carousel ${isAnimating ? "slide-left" : ""}`}
-        onMouseOver={() => {
-          setIsAnimating(false);
-        }}
-        onMouseLeave={() => {
-          setIsAnimating(true);
-        }}
-      >
+      <div className={`carousel slide-left`}>
         {items.map((item) => (
           <div
             key={item.name}
             className={`carousel-item `}
-            style={{ backgroundColor: `${item.name}`, transition: "5s ease" }}
+            style={{ backgroundColor: `${item.name}` }}
           >
             <h1>{item.name}</h1>
           </div>

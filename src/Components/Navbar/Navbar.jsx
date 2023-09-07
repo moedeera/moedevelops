@@ -15,13 +15,12 @@ export const Navbar = () => {
   return (
     <nav className="relative  p-3 h-24 mx-auto text-black w-full  md:p-6">
       <div className="flex items-center justify-between">
-        {" "}
         <div className="hidden md:block">
-          <h1 style={{ fontWeight: "900" }}>
+          <h3 style={{ fontWeight: "900" }}>
             <Link to={"/"}>
               Moe<span className="text-primary">Develops</span>
             </Link>
-          </h1>
+          </h3>
         </div>
         <div className="flex items-center gap-3.5 md:hidden ">
           <div
@@ -30,7 +29,6 @@ export const Navbar = () => {
               showMobileMenu(!mobileMenu);
             }}
           >
-            {" "}
             {mobileMenu ? (
               <img className="img" src={close} alt="close" />
             ) : (
@@ -39,7 +37,6 @@ export const Navbar = () => {
           </div>
 
           <div>
-            {" "}
             <h1 style={{ fontWeight: "900" }}>
               <Link to={"/"}>
                 Moe<span className="text-primary">Develops</span>
@@ -48,7 +45,6 @@ export const Navbar = () => {
           </div>
         </div>
         <div className="hidden md:flex gap-x-3.5">
-          {" "}
           <Link to={"/"}>
             <p>Portfolio</p>
           </Link>

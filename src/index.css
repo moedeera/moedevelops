@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,700;8..60,900&display=swap");
 :root {
   font-family: "Plus Jakarta Sans", sans-serif;
   line-height: 1.5;
@@ -6,7 +7,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-  background-color: grey;
+  background-color: white;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,6 +20,10 @@
 
 a {
   color: white;
+}
+
+h1 {
+  font-family: "Source Serif 4", serif;
 }
 
 h3 {
@@ -44,6 +49,10 @@ button {
   }
   .btn:hover {
     opacity: 0.9;
+  }
+  .header-title {
+    font-size: 72px !important;
+    font-weight: 500 !important;
   }
 }
 
