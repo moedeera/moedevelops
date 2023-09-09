@@ -21,7 +21,7 @@ export const Landing = () => {
       <h1 className="header-title">
         Web Development <br></br> Solutions
       </h1>
-      <p>Design, Develop, Deploy</p>
+      {/* <p>Design. Develop. Deploy</p> */}
       <Link to={"/portfolio"}>
         <button className="btn">See Portfolio</button>
       </Link>
