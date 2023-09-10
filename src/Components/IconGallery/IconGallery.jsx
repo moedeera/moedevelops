@@ -8,7 +8,7 @@ import "./IconGallery.css";
 export const IconGallery = () => {
   const icons = [icon1, icon2, icon3, icon4, icon5];
   return (
-    <div className="icon-container flex justify-between">
+    <div className="icon-container flex justify-between flex-wrap">
       <p className="text-black font-bold">Built with </p>
       {icons.map((icon) => (
         <>

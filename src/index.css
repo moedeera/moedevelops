@@ -47,6 +47,7 @@ button {
   font-family: "Source Serif 4", serif;
   font-weight: 500;
   letter-spacing: 0.75px;
+  max-width: 15rem;
 }
 .btn-alt {
   background-color: #275dad;
