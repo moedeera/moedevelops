@@ -12,8 +12,8 @@ export const Footer = () => {
     { name: "About", link: "/about" },
   ];
   return (
-    <div className="footer">
-      <div className="upper-footer">
+    <div className="footer ">
+      <div className="upper-footer p-5">
         <div>
           <h1 style={{ fontWeight: "900" }}>
             <Link to={"/"}>
