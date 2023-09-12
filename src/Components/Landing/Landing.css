@@ -1,13 +1,14 @@
 .landing {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   text-align: center;
   height: 60vh;
   gap: 25px;
   padding: 50px 0px 20px;
   color: black;
   background-color: white;
+  height: 85vh;
 }
 
 .landing h1 {
@@ -20,7 +21,7 @@
   background-color: #ffda79;
   padding: 10px;
   border-radius: 15px;
-  font-size: x-small;
+  font-size: small;
   color: rgb(3, 3, 33);
   font-weight: 500;
 }
@@ -31,6 +32,10 @@
 }
 
 @media only screen and (min-width: 600px) {
+  .landing {
+    height: auto;
+  }
+
   .landing small {
     font-size: medium;
   }

@@ -16,7 +16,7 @@ export const Landing = () => {
     <div className="landing ">
       <div>
         {" "}
-        <small>Design your websites with functionality in mind</small>
+        <small>Design websites with functionality in mind</small>
       </div>
       <h1 className="header-title">
         Web Development <br></br> Solutions
