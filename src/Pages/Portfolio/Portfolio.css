@@ -1,0 +1,31 @@
+.portfolio {
+  border: 1px solid red;
+  height: 10vh;
+  background-color: grey;
+}
+.portfolio-container {
+  border: 1px solid blue;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 95%;
+  margin: 0 auto;
+}
+.portfolio-item {
+  border: 1px solid green;
+  height: 300px;
+  width: 100%;
+  max-width: 450px;
+  background-color: aliceblue;
+}
+
+@media only screen and (min-width: 600px) {
+  .portfolio-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .portfolio-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
