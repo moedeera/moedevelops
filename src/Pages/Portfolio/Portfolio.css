@@ -1,4 +1,4 @@
-.portfolio {
+.portfolio-filter {
   border: 1px solid red;
   height: 10vh;
   background-color: grey;
@@ -9,13 +9,62 @@
   grid-template-columns: 1fr;
   width: 95%;
   margin: 0 auto;
+  grid-gap: 5px;
 }
 .portfolio-item {
   border: 1px solid green;
   height: 300px;
   width: 100%;
   max-width: 450px;
-  background-color: aliceblue;
+  background-color: darkslategray;
+  display: grid;
+  grid-template-rows: 9fr 1fr;
+  grid-gap: 5px;
+}
+.item-detail-box {
+  background-color: brown;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.detail-box-overlay {
+  border: 2px solid whitesmoke;
+  padding-bottom: 20px;
+}
+
+.item-detail-cta {
+  background-color: teal;
+}
+
+.item-icon img {
+  width: 100%;
+  max-width: 30px;
+}
+
+.item-details-cta {
+  display: flex;
+  border: 2px solid red;
+  justify-content: space-between;
+}
+.item-icons-small {
+  display: flex;
+  gap: 10px;
+}
+
+/* Initially hide the child div */
+.item-detail-box .detail-box-overlay {
+  display: none;
+  transition: all 0.35s ease-in-out;
+  cursor: pointer;
+}
+
+/* When the parent is hovered, show the child */
+.item-detail-box:hover .detail-box-overlay {
+  display: grid;
+  grid-template-columns: 5fr 1fr 1fr;
 }
 
 @media only screen and (min-width: 600px) {
@@ -24,8 +73,14 @@
   }
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 900px) {
   .portfolio-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .portfolio-container {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
