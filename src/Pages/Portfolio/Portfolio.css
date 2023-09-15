@@ -9,7 +9,6 @@
   justify-content: space-between;
 }
 .portfolio-container {
-  border: 1px solid blue;
   display: grid;
   grid-template-columns: 1fr;
   width: 95%;
@@ -17,14 +16,13 @@
   grid-gap: 5px;
 }
 .portfolio-item {
-  border: 1px solid green;
   height: 300px;
   width: 100%;
   max-width: 450px;
-  background-color: darkslategray;
+  /* background-color: darkslategray; */
   display: grid;
   grid-template-rows: 9fr 1fr;
-  grid-gap: 5px;
+  grid-gap: 0px;
 }
 .item-detail-box {
   border-radius: 10px;
@@ -35,27 +33,39 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
 }
 
 .detail-box-overlay {
-  border: 2px solid whitesmoke;
   padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
 }
 
-.item-detail-cta {
-  background-color: teal;
+.item-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
 }
-
 .item-icon img {
   width: 100%;
-  max-width: 30px;
+  max-width: 20px;
   cursor: pointer;
 }
 
 .item-details-cta {
   display: flex;
-  border: 2px solid red;
+  align-items: center;
+  color: black;
   justify-content: space-between;
+  padding: 3px 5px;
 }
 .item-icons-small {
   display: flex;
@@ -65,7 +75,7 @@
 /* Initially hide the child div */
 .item-detail-box .detail-box-overlay {
   display: none;
-  transition: all 0.5s ease-in-out;
+
   cursor: pointer;
 }
 
@@ -74,6 +84,15 @@
   display: grid;
   grid-template-columns: 5fr 1fr 1fr;
   background-color: rgba(128, 128, 128, 0.5);
+  font-weight: 600;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 0.7954831590839461) 0%,
+    rgba(2, 0, 36, 0.753466352361257) 35%,
+    rgba(0, 212, 255, 0) 100%
+  );
+  padding: 10px;
 }
 
 @media only screen and (min-width: 600px) {

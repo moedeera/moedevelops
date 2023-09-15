@@ -4,6 +4,8 @@ import image1 from "./portfolio1.png";
 import image2 from "./portfolio2.jpg";
 import image3 from "./portfolio3.png";
 import image4 from "./portfolio4.jpg";
+import image5 from "./portfolio5.png";
+import image6 from "./portfolio6.png";
 
 export const Portfolio = () => {
   const items = [
@@ -22,8 +24,8 @@ export const Portfolio = () => {
     image2,
     image3,
     image4,
-    image1,
-    image2,
+    image5,
+    image6,
     image3,
     image4,
   ];
