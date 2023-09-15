@@ -1,7 +1,7 @@
 .portfolio-filter {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 10vh;
-  background-color: wheat;
+  /* background-color: wheat; */
   color: black;
   width: 95%;
   margin: 0 auto;
@@ -13,7 +13,7 @@
   grid-template-columns: 1fr;
   width: 95%;
   margin: 0 auto;
-  grid-gap: 5px;
+  grid-gap: 10px;
 }
 .portfolio-item {
   height: 300px;
