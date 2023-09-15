@@ -1,5 +1,9 @@
 import { images } from "../../assets/Images/Images";
 import "./Portfolio.css";
+import image1 from "./portfolio1.png";
+import image2 from "./portfolio2.jpg";
+import image3 from "./portfolio3.png";
+import image4 from "./portfolio4.jpg";
 
 export const Portfolio = () => {
   const items = [
@@ -12,14 +16,35 @@ export const Portfolio = () => {
     { id: 7, name: "Hotel Website" },
     { id: 8, name: "Niche Website" },
   ];
+
+  const imagesO = [
+    image1,
+    image2,
+    image3,
+    image4,
+    image1,
+    image2,
+    image3,
+    image4,
+  ];
+
   return (
     <div className="page-container">
       Portfolio
-      <div className="portfolio-filter">Filter</div>
+      <div className="portfolio-filter">
+        <div className="dropdown">Dropdown</div>
+        <div className="">titles</div>
+        <div className="item-icon">
+          <img src={images[4]} alt="" />
+        </div>
+      </div>
       <div className="portfolio-container">
-        {items.map((item) => (
+        {items.map((item, index) => (
           <div key={item.id} className="portfolio-item">
-            <div className="item-detail-box">
+            <div
+              className="item-detail-box"
+              style={{ backgroundImage: `url(${imagesO[index]})` }}
+            >
               <div className="detail-box-overlay">
                 <h3>{item.name}</h3>
                 <div className="item-icon">

@@ -1,7 +1,12 @@
 .portfolio-filter {
   border: 1px solid red;
   height: 10vh;
-  background-color: grey;
+  background-color: wheat;
+  color: black;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 .portfolio-container {
   border: 1px solid blue;
@@ -22,12 +27,14 @@
   grid-gap: 5px;
 }
 .item-detail-box {
-  background-color: brown;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .detail-box-overlay {
@@ -42,6 +49,7 @@
 .item-icon img {
   width: 100%;
   max-width: 30px;
+  cursor: pointer;
 }
 
 .item-details-cta {
@@ -57,7 +65,7 @@
 /* Initially hide the child div */
 .item-detail-box .detail-box-overlay {
   display: none;
-  transition: all 0.35s ease-in-out;
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
 
@@ -65,6 +73,7 @@
 .item-detail-box:hover .detail-box-overlay {
   display: grid;
   grid-template-columns: 5fr 1fr 1fr;
+  background-color: rgba(128, 128, 128, 0.5);
 }
 
 @media only screen and (min-width: 600px) {
