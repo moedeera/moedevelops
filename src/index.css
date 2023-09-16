@@ -48,7 +48,6 @@ button {
 .page-container {
   min-height: 100vh;
   overflow: hidden;
-  margin-top: 100px;
 }
 .btn {
   background-color: black;
@@ -80,6 +79,9 @@ button {
   .header-title {
     font-size: 72px !important;
     font-weight: 500 !important;
+  }
+  .page-container {
+    margin-top: 100px;
   }
 }
 

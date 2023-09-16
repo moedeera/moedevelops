@@ -64,7 +64,7 @@ export const Navbar = () => {
             </div>
             <div>
               <h3 style={{ fontWeight: "900" }}>
-                <Link to={"/login"} className="text-red">
+                <Link to={"/contact"} className="text-red">
                   <button className="btn">Contact</button>
                 </Link>
               </h3>

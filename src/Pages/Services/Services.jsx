@@ -6,21 +6,42 @@ export const Services = () => {
     header: `A Better way to build a website`,
     texts: [
       {
-        header: "The #1 job board for design talent",
+        header: "Consulting",
         text: ` Get your job listings in front of millions of top-rated designers
           looking for their next role with an average of 1.1K targeted clicks
           per month.`,
         button: "",
       },
       {
-        header: "The #1 job board for design talent",
+        header: "Personal Websites",
         text: ` Get your job listings in front of millions of top-rated designers
           looking for their next role with an average of 1.1K targeted clicks
           per month.`,
         button: "",
       },
       {
-        header: "The #1 job board for design talent",
+        header: "Business Websites",
+        text: ` Get your job listings in front of millions of top-rated designers
+          looking for their next role with an average of 1.1K targeted clicks
+          per month.`,
+        button: "",
+      },
+      {
+        header: "eCommerce",
+        text: ` Get your job listings in front of millions of top-rated designers
+          looking for their next role with an average of 1.1K targeted clicks
+          per month.`,
+        button: "",
+      },
+      {
+        header: "Web Application",
+        text: ` Get your job listings in front of millions of top-rated designers
+          looking for their next role with an average of 1.1K targeted clicks
+          per month.`,
+        button: "",
+      },
+      {
+        header: "Digital Marketing",
         text: ` Get your job listings in front of millions of top-rated designers
           looking for their next role with an average of 1.1K targeted clicks
           per month.`,

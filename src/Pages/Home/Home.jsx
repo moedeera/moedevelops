@@ -46,7 +46,7 @@ export const Home = () => {
   };
 
   return (
-    <div className="page-container">
+    <div className="page-container flex flex-col gap-5">
       <Landing />
       <Carousel />
       <CarouselSmall />
