@@ -1,5 +1,33 @@
 .form {
-  border: 1px solid red;
   width: 85%;
   margin: 0 auto;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 15px 5px;
+}
+
+.input-section,
+.text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-section input {
+  border: 2px solid #e7e7e9;
+  border-radius: 5px;
+  padding: 13px 20px;
+  max-width: 26rem;
+}
+
+.text-section {
+}
+.text-section textarea {
+  border: 2px solid #e7e7e9;
+  border-radius: 5px;
+  padding: 13px 20px;
+  max-width: 26rem;
 }

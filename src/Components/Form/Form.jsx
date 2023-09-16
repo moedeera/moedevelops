@@ -4,17 +4,18 @@ export const Form = () => {
     <div className="form">
       <div className="input-section">
         <div className="input-label">Name or Company</div>
-        <input type="text" placeholder="name" />
+        <input type="text" placeholder="Enter your name" />
       </div>
       <div className="input-section">
         {" "}
         <div className="input-label">Email</div>
-        <input type="text" placeholder="email" />
+        <input type="text" placeholder="Enter an Email" />
       </div>
       <div className="text-section">
         <div className="input-label">Message</div>
-        <textarea />
+        <textarea placeholder="Type in message" cols={40} rows={7} />
       </div>
+      <button className="btn">Submit</button>
     </div>
   );
 };
