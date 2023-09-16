@@ -1,4 +1,5 @@
 import "./Carousel.css";
+import { portfolioImages } from "../../assets/Portfolio/images";
 
 export const Carousel = () => {
   const items = [
@@ -55,12 +56,12 @@ export const Carousel = () => {
   return (
     <div>
       <div className={`carousel slide-left`}>
-        {items.map((item) => (
+        {items.map((item, index) => (
           <div
             key={item.name}
             className={`carousel-item `}
             style={{
-              backgroundImage: `url("${item.image}")`,
+              backgroundImage: `url("${portfolioImages[index]}")`,
             }}
           >
             <div className="item-info">
