@@ -7,6 +7,7 @@ import { Navbar } from "./Components/Navbar/Navbar";
 import { Footer } from "./Components/Footer/Footer";
 import { Contact } from "./Pages/Contact/Contact";
 import { Portfolio } from "./Pages/Portfolio/Portfolio";
+import { Services } from "./Pages/Services/Services";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
         <Footer />
       </Router>

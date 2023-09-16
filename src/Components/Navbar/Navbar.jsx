@@ -9,8 +9,16 @@ export const Navbar = () => {
     { name: "Home", link: "/" },
     { name: "Portfolio", link: "/portfolio" },
     { name: "Contact", link: "/contact" },
+    { name: "Services", link: "/services" },
     { name: "About", link: "/about" },
   ];
+
+  const menuSectionItems = [
+    { name: "Portfolio", link: "/portfolio" },
+    { name: "Services", link: "/services" },
+    { name: "About", link: "/about" },
+  ];
+
   return (
     <>
       <div className={mobileMenu && "overlay"}>
@@ -48,13 +56,11 @@ export const Navbar = () => {
               </div>
             </div>
             <div className="hidden md:flex gap-x-3.5">
-              <Link to={"/"}>
-                <p>Portfolio</p>
-              </Link>
-              <Link to={"/about"}>
-                <p className="hover:text-red"> Services</p>
-              </Link>
-              <Link to={"/about"}>About</Link>
+              {menuSectionItems.map((item) => (
+                <Link key={item.name} to={item.link}>
+                  <p>{item.name}</p>
+                </Link>
+              ))}
             </div>
             <div>
               <h3 style={{ fontWeight: "900" }}>

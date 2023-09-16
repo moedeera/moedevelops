@@ -1,4 +1,5 @@
 import { images } from "../../assets/Images/Images";
+import { Filter } from "./Filter/Filter";
 import "./Portfolio.css";
 import image1 from "./portfolio1.png";
 import image2 from "./portfolio2.jpg";
@@ -34,14 +35,7 @@ export const Portfolio = () => {
 
   return (
     <div className="page-container">
-      Portfolio
-      <div className="portfolio-filter">
-        <div className="dropdown">Dropdown</div>
-        <div className="">titles</div>
-        <div className="item-icon">
-          <img src={images[4]} alt="" />
-        </div>
-      </div>
+      <Filter />
       <div className="portfolio-container">
         {items.map((item, index) => (
           <div key={item.id} className="portfolio-item">

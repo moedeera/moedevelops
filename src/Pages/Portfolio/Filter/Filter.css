@@ -1,0 +1,17 @@
+.portfolio-filter {
+  /* border: 1px solid red; */
+
+  /* background-color: wheat; */
+  color: black;
+  width: 95%;
+  margin: 0 auto;
+}
+.upper-portfolio-filter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lower-portfolio-filter {
+  border: 1px solid red;
+  min-height: 100px;
+}

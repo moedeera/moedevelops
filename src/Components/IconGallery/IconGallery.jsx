@@ -7,13 +7,18 @@ import icon5 from "./wordpress.png";
 import "./IconGallery.css";
 export const IconGallery = () => {
   const icons = [icon1, icon2, icon3, icon4, icon5];
+  const name = ["JavaScript", "Shopify", "SquareSpace", "React", "WordPress"];
   return (
-    <div className="icon-container flex justify-between flex-wrap">
-      <p className="text-black font-bold">Built with </p>
-      {icons.map((icon) => (
-        <>
+    <div className="icon-container">
+      <p className="text-black font-bold">My Stack</p>
+      {icons.map((icon, index) => (
+        <div
+          key={name[index]}
+          className="md:flex text-black gap-x-1 items-center"
+        >
+          <small className="font-bold"> {name[index]} </small>{" "}
           <img src={icon} alt="" />
-        </>
+        </div>
       ))}
     </div>
   );
