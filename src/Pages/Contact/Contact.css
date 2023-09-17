@@ -1,0 +1,13 @@
+.form-page {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: 50px auto;
+  padding: 10px 0;
+}
+
+@media only screen and (min-width: 900px) {
+  .form-page {
+    flex-direction: row;
+  }
+}
