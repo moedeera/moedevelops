@@ -67,12 +67,9 @@ export const Carousel = () => {
             <div className="item-info">
               {/* <h3>{item.name} Website</h3> */}
               <div className="icons"></div>
-              <h2 className="carousel-content-header">Project Website</h2>
-              <small>
-                A long established fact that a reader will be distracted by the
-                readable content of a page when looking at its layout.
-              </small>
-              <button className="btn btn-alt">View</button>
+
+              {/* <small>Click to View</small> */}
+              {/* <button className="btn btn-alt">View</button> */}
             </div>
           </div>
         ))}

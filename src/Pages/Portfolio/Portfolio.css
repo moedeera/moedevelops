@@ -83,7 +83,7 @@
 .item-detail-box:hover .detail-box-overlay {
   display: grid;
   grid-template-columns: 5fr 1fr 1fr;
-  background-color: rgba(128, 128, 128, 0.5);
+
   font-weight: 600;
   background: rgb(2, 0, 36);
   background: linear-gradient(
