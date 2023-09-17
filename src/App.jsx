@@ -8,24 +8,30 @@ import { Footer } from "./Components/Footer/Footer";
 import { Contact } from "./Pages/Contact/Contact";
 import { Portfolio } from "./Pages/Portfolio/Portfolio";
 import { Services } from "./Pages/Services/Services";
-
+import { SiteContextProvider } from "./Context/Context";
+import { AnimatePresence } from "framer-motion";
+AnimatePresence;
 function App() {
   return (
-    <>
+    <SiteContextProvider>
       {" "}
       <Router>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/services" element={<Services />} />
-        </Routes>
+        <AnimatePresence mode="wait">
+          {" "}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/services" element={<Services />} />
+          </Routes>
+        </AnimatePresence>
+
         <Footer />
       </Router>
-    </>
+    </SiteContextProvider>
   );
 }
 

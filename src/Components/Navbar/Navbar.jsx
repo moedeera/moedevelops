@@ -6,22 +6,22 @@ export const Navbar = () => {
   const [mobileMenu, showMobileMenu] = useState(false);
 
   const menuItems = [
-    { name: "Home", link: "/" },
-    { name: "Portfolio", link: "/portfolio" },
-    { name: "Contact", link: "/contact" },
-    { name: "Services", link: "/services" },
-    { name: "About", link: "/about" },
+    { id: 1, name: "Home", link: "/" },
+    { id: 2, name: "Portfolio", link: "/portfolio" },
+    { id: 3, name: "Contact", link: "/contact" },
+    { id: 4, name: "Services", link: "/services" },
+    { id: 5, name: "About", link: "/about" },
   ];
 
   const menuSectionItems = [
-    { name: "Portfolio", link: "/portfolio" },
-    { name: "Services", link: "/services" },
-    { name: "About", link: "/about" },
+    { id: 1, name: "Portfolio", link: "/portfolio" },
+    { id: 2, name: "Services", link: "/services" },
+    { id: 3, name: "About", link: "/about" },
   ];
 
   return (
     <>
-      <div className={mobileMenu && "overlay"}>
+      <div className={mobileMenu ? "overlay" : ""}>
         <nav className="relative  p-3 h-24 mx-auto text-black w-full  md:p-6">
           <div className="flex items-center justify-between">
             <div className="hidden md:block">
@@ -57,7 +57,7 @@ export const Navbar = () => {
             </div>
             <div className="hidden md:flex gap-x-3.5">
               {menuSectionItems.map((item) => (
-                <Link key={item.name} to={item.link}>
+                <Link key={item.id} to={item.link}>
                   <p>{item.name}</p>
                 </Link>
               ))}
@@ -82,7 +82,7 @@ export const Navbar = () => {
               <>
                 <Link
                   to={`${item.link}`}
-                  key={item.name}
+                  key={item.id}
                   onClick={() => {
                     showMobileMenu(false);
                   }}

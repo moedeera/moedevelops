@@ -7,8 +7,8 @@ export const Segment2 = ({ info }) => {
         <h1>{info.header}</h1>
       </div>
       <div className="segment-2-lower">
-        {info.texts.map((text) => (
-          <div key={text.header} className="segment-2-ls">
+        {info.texts.map((text, index) => (
+          <div key={index} className="segment-2-ls">
             <h3>{text.header}</h3>
             <p>{text.text}</p>
           </div>
