@@ -1,6 +1,6 @@
 import { Carousel } from "../../Components/Carousel/Carousel";
 import { CarouselSmall } from "../../Components/CarouselSmall/CarouselSmall";
-import { IconGallery } from "../../Components/IconGallery/IconGallery";
+// import { IconGallery } from "../../Components/IconGallery/IconGallery";
 import { Landing } from "../../Components/Landing/Landing";
 import { Segment1 } from "../../Components/Segment1/Segment1";
 import { Segment2 } from "../../Components/Segment2/Segment2";
@@ -50,7 +50,7 @@ export const Home = () => {
       <Landing />
       <Carousel />
       <CarouselSmall />
-      <IconGallery />
+      {/* <IconGallery /> */}
       <Segment1 info={info} />
       <Segment2 info={info2} />
     </div>

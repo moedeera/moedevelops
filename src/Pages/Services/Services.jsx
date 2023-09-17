@@ -3,7 +3,7 @@ import { Segment2 } from "../../Components/Segment2/Segment2";
 
 export const Services = () => {
   const info2 = {
-    header: `A Better way to build a website`,
+    header: `Need help with anything Web Related? `,
     texts: [
       {
         header: "Consulting",
