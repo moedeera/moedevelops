@@ -8,7 +8,7 @@
   margin-bottom: 25px;
 }
 .segment-2-upper h1 {
-  font-size: 48px;
+  font-size: var(--headerSM);
   line-height: 56px;
   font-weight: 400;
 }
@@ -35,5 +35,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
+  }
+  .segment-2-upper h1 {
+    font-size: var(--headerMD);
   }
 }

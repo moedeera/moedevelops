@@ -2,18 +2,20 @@
   font-family: "Source Serif 4", serif;
   font-weight: 400 !important;
   letter-spacing: -0.5px;
-  font-size: 56px !important;
+  font-size: var(--headerSM) !important;
   color: black;
   margin: 50px auto;
   text-align: center;
 }
 
 .portfolio-container {
-  display: grid;
-  grid-template-columns: 1fr;
   width: 95%;
   margin: 10px auto;
   grid-gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .portfolio-item {
   max-height: 300px;
@@ -97,13 +99,21 @@
 
 @media only screen and (min-width: 600px) {
   .portfolio-container {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .portfolio-page h1 {
+    font-size: var(--headerMD) !important;
   }
 }
 
 @media only screen and (min-width: 900px) {
   .portfolio-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .portfolio-page h1 {
+    font-size: var(--headerLG) !important;
   }
 }
 

@@ -25,6 +25,9 @@
   -webkit-text-size-adjust: 100%;
   --primary: #275dad;
   --secondary: #5ea9ff;
+  --headerSM: 32px;
+  --headerMD: 48px;
+  --headerLG: 56px;
 }
 
 a {
