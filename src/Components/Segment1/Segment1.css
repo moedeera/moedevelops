@@ -13,7 +13,7 @@
 
 .segment-1 h1 {
   font-family: "Source Serif 4", serif;
-  font-size: 55px;
+  font-size: 48px !important;
 }
 .segment-1-text {
   display: flex;
@@ -30,10 +30,6 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .segment-1 h1 {
-    font-family: "Source Serif 4", serif;
-    font-size: 62px;
-  }
   .segment-1-text {
     justify-content: flex-start;
   }
