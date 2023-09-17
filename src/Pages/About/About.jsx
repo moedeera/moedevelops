@@ -1,6 +1,7 @@
 import { Segment1 } from "../../Components/Segment1/Segment1";
+import transition from "../../Transition";
 
-export const About = () => {
+const About = () => {
   const info = {
     header: `Coding is not just a skill. It's My Passion`,
     text: `Hello there! My name is Moe. I started learning coding back in 2020 and immediately fell in love with it. Early on, I decided to focus on web development with an emphasis on design.
@@ -16,3 +17,7 @@ export const About = () => {
     </div>
   );
 };
+
+const AboutPage = transition(About);
+
+export default AboutPage;
