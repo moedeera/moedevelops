@@ -10,6 +10,7 @@ import { Portfolio } from "./Pages/Portfolio/Portfolio";
 import { Services } from "./Pages/Services/Services";
 import { SiteContextProvider } from "./Context/Context";
 import { AnimatePresence } from "framer-motion";
+import { Content } from "./Pages/Content/Content";
 AnimatePresence;
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/admin" element={<Content />} />
           </Routes>
         </AnimatePresence>
 
