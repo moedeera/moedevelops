@@ -1,10 +1,15 @@
 import { useContext, useState } from "react";
 import { SiteContext } from "../../Context/Context";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import { app } from "../../firebase-config";
 
 export const LoginForm = () => {
-  const { user, setUser, logState, setLogState } = useContext(SiteContext);
+  const { user, setUser, logState, setLogState, onRegister, onLog } =
+    useContext(SiteContext);
   const auth = getAuth(app);
 
   const [newUser, setNewUser] = useState({
@@ -13,79 +18,130 @@ export const LoginForm = () => {
     password: "",
   });
 
-  const onChangeHandler = (e, type) => {
+  const [logUser, setLogUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const onChangeHandler = (e, type, userInfo, setUserInfo) => {
     if (type === "name") {
-      setNewUser({ ...newUser, name: e.target.value });
+      setUserInfo({ ...userInfo, name: e.target.value });
     } else if (type === "email") {
-      setNewUser({ ...newUser, email: e.target.value });
+      setUserInfo({ ...userInfo, email: e.target.value });
     } else if (type === "password") {
-      setNewUser({ ...newUser, password: e.target.value });
+      setUserInfo({ ...userInfo, password: e.target.value });
     }
   };
 
-  const onSubmit = async () => {
-    createUserWithEmailAndPassword(auth, newUser.email, newUser.password)
-      .then(() => {
-        // Signed in
-        console.log("success");
-        // ...
-      })
-      .catch((error) => {
-        console.log(error);
-        // ..
-      });
-  };
+  const [mode, setMode] = useState("login");
 
   return (
     <div className="content-login">
-      <div className="form">
-        <h1>Login Test</h1>
-        <div className="input-section">
-          <div className="input-label">Name </div>
-          <input
-            name="name"
-            type="text"
-            value={newUser.name}
-            onChange={(e) => {
-              onChangeHandler(e, "name");
+      {mode === "login" && (
+        <div className="form">
+          <h1>Login Test</h1>
+
+          <div className="input-section">
+            {" "}
+            <div className="input-label">Email</div>
+            <input
+              name="name"
+              type="email"
+              value={logUser.email}
+              onChange={(e) => {
+                onChangeHandler(e, "email", logUser, setLogUser);
+              }}
+              placeholder="Enter an Email"
+            />
+          </div>
+          <div className="input-section">
+            <div className="input-label">Password</div>
+            <input
+              name="name"
+              type="text"
+              value={logUser.password}
+              onChange={(e) => {
+                onChangeHandler(e, "password", logUser, setLogUser);
+              }}
+              placeholder="Enter Password"
+            />
+          </div>
+          <button
+            onClick={() => {
+              onLog(logUser);
             }}
-            placeholder="Enter your name"
-          />
-        </div>
-        <div className="input-section">
-          {" "}
-          <div className="input-label">Email</div>
-          <input
-            name="name"
-            type="text"
-            value={newUser.email}
-            onChange={(e) => {
-              onChangeHandler(e, "name");
+            className="btn"
+          >
+            Login
+          </button>
+          <small
+            onClick={() => {
+              setMode("register");
             }}
-            placeholder="Enter an Email"
-          />
+          >
+            or Register
+          </small>
         </div>
-        <div className="input-section">
-          <div className="input-label">Password</div>
-          <input
-            name="name"
-            type="text"
-            value={newUser.password}
-            onChange={(e) => {
-              onChangeHandler(e, "name");
+      )}
+
+      {mode === "register" && (
+        <div className="form">
+          <h1>Register Test</h1>
+          <div className="input-section">
+            <div className="input-label">Name </div>
+            <input
+              name="name"
+              type="text"
+              value={newUser.name}
+              onChange={(e) => {
+                onChangeHandler(e, "name", newUser, setNewUser);
+              }}
+              placeholder="Enter your name"
+            />
+          </div>
+          <div className="input-section">
+            {" "}
+            <div className="input-label">Email</div>
+            <input
+              name="name"
+              type="email"
+              value={newUser.email}
+              onChange={(e) => {
+                onChangeHandler(e, "email", newUser, setNewUser);
+              }}
+              placeholder="Enter an Email"
+            />
+          </div>
+          <div className="input-section">
+            <div className="input-label">Password</div>
+            <input
+              name="name"
+              type="text"
+              value={newUser.password}
+              onChange={(e) => {
+                onChangeHandler(e, "password", newUser, setNewUser);
+              }}
+              placeholder="Enter Password"
+            />
+          </div>
+          <button
+            onClick={() => {
+              onRegister(newUser);
             }}
-            placeholder="Enter Password"
-          />
+            className="btn"
+          >
+            Create Account
+          </button>
+          <small
+            onClick={() => {
+              setMode("login");
+            }}
+          >
+            or Login
+          </small>
         </div>
-        <button
-          onClick={() => {
-            onSubmit();
-          }}
-          className="btn"
-        >
-          Create Account
-        </button>
-      </div>
+      )}
     </div>
   );
 };

@@ -1,5 +1,10 @@
 .content-page {
+  transition: all 0.5s ease-in-out;
 }
 .content-login {
   border: 1px solid grey;
+}
+
+.content-login small {
+  cursor: pointer;
 }
