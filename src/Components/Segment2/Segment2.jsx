@@ -1,5 +1,6 @@
 import "./Segment2.css";
 
+// eslint-disable-next-line react/prop-types
 export const Segment2 = ({ info }) => {
   return (
     <div className="segment-2">
