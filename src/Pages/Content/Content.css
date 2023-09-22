@@ -1,5 +1,9 @@
 .content-page {
   transition: all 0.5s ease-in-out;
+  border: 1px solid grey;
+  width: 85%;
+  margin: 0 auto;
+  padding: 15px;
 }
 .content-login {
   border: 1px solid grey;
@@ -7,4 +11,24 @@
 
 .content-login small {
   cursor: pointer;
+}
+
+.messages-box {
+  color: black !important;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  min-height: 175px;
+
+  margin: 10px 0;
+
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.message-box-author {
+  background-color: aliceblue;
+  padding: 10px;
+}
+.message-box-message {
+  padding: 10px;
 }

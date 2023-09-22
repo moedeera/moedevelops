@@ -31,3 +31,13 @@
   padding: 13px 20px;
   max-width: 26rem;
 }
+
+.success {
+  border-radius: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  width: max-content;
+  padding: 10px;
+  background-color: #d4edda;
+  font-weight: 600;
+  color: #155724;
+}

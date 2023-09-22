@@ -39,6 +39,7 @@ export const SiteContextProvider = ({ children }) => {
       .then((userCredential) => {
         // Signed in
         console.log(userCredential.user);
+        setLogState(true);
         // ...
       })
       .catch((error) => {

@@ -1,10 +1,6 @@
 import { useContext, useState } from "react";
 import { SiteContext } from "../../Context/Context";
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
+import { getAuth } from "firebase/auth";
 import { app } from "../../firebase-config";
 
 export const LoginForm = () => {
