@@ -7,7 +7,7 @@ export const Segment1 = ({ info }) => {
       <div>
         <h1>
           {info.header}
-          <br />
+
           {info.header2}
         </h1>
       </div>

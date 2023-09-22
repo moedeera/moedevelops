@@ -6,6 +6,7 @@ import {
 } from "firebase/auth";
 
 import { app } from "../firebase-config";
+import { info1, info2, info4, info5 } from "../assets/Content/Content";
 export const SiteContext = createContext({});
 
 const auth = getAuth(app);
@@ -33,6 +34,7 @@ export const SiteContextProvider = ({ children }) => {
       userInfo.email,
       userInfo.password
     );
+
     signInWithEmailAndPassword(auth, userInfo.email, userInfo.password)
       .then((userCredential) => {
         // Signed in
@@ -58,6 +60,10 @@ export const SiteContextProvider = ({ children }) => {
         logState,
         onRegister,
         onLog,
+        info1,
+        info2,
+        info4,
+        info5,
       }}
     >
       {children}

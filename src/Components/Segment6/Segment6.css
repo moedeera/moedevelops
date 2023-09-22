@@ -1,0 +1,30 @@
+.segment-6 {
+  background-color: var(--primary);
+  min-height: 500px;
+  background-color: #ffda79;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.segment-6 h1 {
+  font-size: var(--headerSM);
+}
+.segment-6 p {
+  font-size: large;
+}
+
+@media only screen and (min-width: 600px) {
+  .segment-6 h1 {
+    font-size: var(--headerMD);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .segment-6 h1 {
+    font-size: var(--headerLG);
+  }
+}

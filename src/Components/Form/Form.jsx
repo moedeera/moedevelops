@@ -4,8 +4,10 @@ import { useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
 
 export const Form = () => {
-  // const [sent, setSent] = useState(false);
-  // const messageData = collection(db, "messages");
+  const [sent, setSent] = useState(false);
+  const [count, setCount] = useState(1);
+  // const messageData = collection(db, "msg");
+  // console.log(messageData);
   const [msg, setMessage] = useState({
     name: "",
     email: "",
@@ -21,6 +23,26 @@ export const Form = () => {
       setUserInfo({ ...userInfo, password: e.target.value });
     }
   };
+
+  // const onSubmit = async () => {
+  //   try {
+  //     await addDoc(messageData, {
+  //       name: msg.name,
+  //       message: msg.message,
+  //       email: msg.email,
+  //     });
+  //     setSent(true);
+  //     setCount(count + 1);
+  //     setMessage({
+  //       name: "",
+  //       email: "",
+  //       message: "",
+  //     });
+  //     console.log("message sent");
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   return (
     <div className="form">

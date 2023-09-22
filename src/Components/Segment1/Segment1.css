@@ -37,3 +37,8 @@
     font-size: var(--headerMD) !important;
   }
 }
+@media only screen and (min-width: 600px) {
+  .segment-1 h1 {
+    font-size: var(--headerLG) !important;
+  }
+}
