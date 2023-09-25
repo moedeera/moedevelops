@@ -1,11 +1,22 @@
 .carousel-container {
   border: 1px solid red;
-  height: 200px;
+  overflow: hidden;
   background-color: green;
   position: relative;
 }
 .sm-portfolio-container {
   border: 1px solid red;
+  display: flex;
+
+  gap: 300px;
+  width: 300px;
+  margin: 0 auto;
+  transform: translateX(-00%);
+}
+.sm-portfolio-item {
+  height: 300px;
+  width: 100%;
+  min-width: 300px;
 }
 
 @media only screen and (min-width: 600px) {

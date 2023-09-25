@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./CarouselSmall.css";
+import { useState } from "react";
 
 export const CarouselSmall = () => {
   const items = [
@@ -52,12 +53,32 @@ export const CarouselSmall = () => {
         "https://cdn.dribbble.com/userupload/9878452/file/original-2f72411961f71611b1323d4f62560cf2.png?resize=450x338&vertical=center",
     },
   ];
+
+  const [slide, setSlide] = useState(1);
+
+  const animateSlide = () => {
+    if (slide === 1) {
+      setSlide(slide + 1);
+    }
+    console.log(slide);
+  };
+
+  animateSlide();
+
   return (
     <div className="carousel-container">
       <div className="sm-carousel-left-arrow">{">"}</div>
       <div className="sm-carousel-right-arrow">{"<"}</div>
       <div className="sm-portfolio-container">
-        <div className="sm-portfolio-item">Portfolio Item</div>
+        {items.map((item) => (
+          <div
+            style={{ backgroundColor: `${item.name}` }}
+            key={item.id}
+            className="sm-portfolio-item"
+          >
+            Portfolio Item
+          </div>
+        ))}
       </div>
       <div className="portfolio-dots"></div>
     </div>
