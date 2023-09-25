@@ -11,7 +11,7 @@ import { Services } from "./Pages/Services/Services";
 import { SiteContextProvider } from "./Context/Context";
 import { AnimatePresence } from "framer-motion";
 import { Content } from "./Pages/Content/Content";
-AnimatePresence;
+
 function App() {
   return (
     <SiteContextProvider>
