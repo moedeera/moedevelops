@@ -1,0 +1,15 @@
+.carousel-container {
+  border: 1px solid red;
+  height: 200px;
+  background-color: green;
+  position: relative;
+}
+.sm-portfolio-container {
+  border: 1px solid red;
+}
+
+@media only screen and (min-width: 600px) {
+  .carousel-container {
+    display: none;
+  }
+}
