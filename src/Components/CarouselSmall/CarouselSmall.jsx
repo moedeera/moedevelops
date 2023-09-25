@@ -52,30 +52,5 @@ export const CarouselSmall = () => {
         "https://cdn.dribbble.com/userupload/9878452/file/original-2f72411961f71611b1323d4f62560cf2.png?resize=450x338&vertical=center",
     },
   ];
-  return (
-    <div className="p-1 carousel-container">
-      <h3 className="text-black font-bold text-center">Recent work</h3>
-      <div className="carousel-sm">
-        {items.map(
-          (item, index) =>
-            index > 3 && (
-              <div
-                style={{ backgroundImage: `url(${item.image})` }}
-                key={item.id}
-                className="sm-carousel-box"
-              >
-                <div className="overlay-sm"></div>
-                <div className="carousel-sm-content">
-                  {" "}
-                  <h2 className="carousel-content-header">Project website</h2>
-                  <p>Design driver user friendly website completed.</p>
-                  <button className="btn btn-alt ">View</button>{" "}
-                </div>
-                <Link to={"./portfolio"}> </Link>
-              </div>
-            )
-        )}
-      </div>
-    </div>
-  );
+  return <div className="p-1 carousel-container"></div>;
 };
