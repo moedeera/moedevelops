@@ -18,6 +18,6 @@ const About = () => {
   );
 };
 
-const AboutPage = transition(About);
+// const AboutPage = transition(About);
 
-export default AboutPage;
+export default About;

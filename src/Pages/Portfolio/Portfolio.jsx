@@ -13,24 +13,26 @@ import image8 from "./portfolio8.png";
 
 export const Portfolio = () => {
   const items = [
-    { id: 1, name: "Farm Website" },
-    { id: 2, name: "Crypto Website" },
+    { id: 1, name: "Men's Fashion" },
+    { id: 2, name: "Local Diner" },
     { id: 3, name: "Salon Website" },
     { id: 4, name: "Fitness Website" },
     { id: 5, name: "Online Learning" },
     { id: 6, name: "Clothing" },
-    { id: 7, name: "Hotel Website" },
+    { id: 7, name: "Farm Website" },
     { id: 8, name: "Niche Website" },
   ];
 
   const imagesO = [
-    image1,
+    image7,
     image2,
+    image1,
+
     image3,
     image4,
     image5,
     image6,
-    image7,
+
     image8,
   ];
 

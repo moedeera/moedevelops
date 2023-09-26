@@ -29,6 +29,6 @@ const Home = () => {
   );
 };
 
-const HomePage = transition(Home);
+// const HomePage = transition(Home);
 
-export default HomePage;
+export default Home;
