@@ -1,4 +1,5 @@
 import { images } from "../../assets/Images/Images";
+import { portfolioImages } from "../../assets/Portfolio/images";
 // import { Filter } from "./Filter/Filter";
 import "./Portfolio.css";
 import image1 from "./portfolio1.png";
@@ -6,8 +7,8 @@ import image2 from "./portfolio2.jpg";
 import image3 from "./portfolio3.png";
 import image4 from "./portfolio4.jpg";
 import image5 from "./portfolio5.png";
-import image6 from "./portfolio6.png";
-import image7 from "./portfolio7.png";
+import image6 from "./p6.png";
+import image7 from "./p7.png";
 import image8 from "./portfolio8.png";
 
 export const Portfolio = () => {
