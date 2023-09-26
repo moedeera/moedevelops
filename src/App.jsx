@@ -9,7 +9,7 @@ import { Contact } from "./Pages/Contact/Contact";
 import { Portfolio } from "./Pages/Portfolio/Portfolio";
 import { Services } from "./Pages/Services/Services";
 import { SiteContextProvider } from "./Context/Context";
-import { AnimatePresence } from "framer-motion";
+// import { AnimatePresence } from "framer-motion";
 import { Content } from "./Pages/Content/Content";
 import { Project } from "./Pages/Project/Project";
 
