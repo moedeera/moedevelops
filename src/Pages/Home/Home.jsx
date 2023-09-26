@@ -6,7 +6,7 @@ import { Landing } from "../../Components/Landing/Landing";
 import { Segment1 } from "../../Components/Segment1/Segment1";
 import { Segment2 } from "../../Components/Segment2/Segment2";
 import { SiteContext } from "../../Context/Context";
-import transition from "../../Transition";
+// import transition from "../../Transition";
 import { Segment4 } from "../../Components/Segment4/Segment4";
 import { Segment5 } from "../../Components/Segment5/Segment5";
 import { Segment6 } from "../../Components/Segment6/Segment6";

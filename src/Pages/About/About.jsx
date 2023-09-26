@@ -1,5 +1,5 @@
 import { Segment1 } from "../../Components/Segment1/Segment1";
-import transition from "../../Transition";
+// import transition from "../../Transition";
 
 const About = () => {
   const info = {
