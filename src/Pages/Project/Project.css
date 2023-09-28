@@ -68,7 +68,7 @@
   grid-template-columns: 1fr;
   margin-top: 50px;
   grid-gap: 10px;
-  border: 1px solid rgba(128, 128, 128, 0.125);
+  border: 1px solid rgba(128, 128, 128, 0.025);
   padding: 20px 10px;
   border-radius: 10px;
   background-color: #f9f9fa;
@@ -81,12 +81,12 @@
 }
 
 .project-gallery {
-  height: 450px;
+  height: 400px;
   width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border: 1px solid rgba(128, 128, 128, 1);
+  border: 1px solid rgba(128, 128, 128, 0.25);
   border-radius: 10px;
 }
 @media only screen and (min-width: 600px) {

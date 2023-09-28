@@ -5,9 +5,11 @@ import port4 from "./img4.jpg";
 import port5 from "./img5.jpg";
 import port6 from "./img6.jpg";
 import port7 from "./img7.png";
+import port8 from "./img8.png";
+import port9 from "./img9.png";
 // import * as natural from "natural";
 
-const images = [port1, port2, port3, port4, port5, port6, port7, port1];
+const images = [port1, port2, port3, port4, port5, port6, port7, port8, port9];
 
 // function findClosestImageSource(source) {
 //   const sourceKeys = Object.keys(images);

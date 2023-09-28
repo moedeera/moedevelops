@@ -46,16 +46,16 @@ export const Project = () => {
       <div className="project-images">
         <div
           className="project-gallery"
-          style={{ backgroundImage: `url(${portfolioImages[0]})` }}
+          style={{ backgroundImage: `url(${portfolioImages[8]})` }}
         ></div>
         <div
           className="project-gallery"
-          style={{ backgroundImage: `url(${portfolioImages[1]})` }}
+          style={{ backgroundImage: `url(${portfolioImages[7]})` }}
         ></div>
-        <div
+        {/* <div
           className="project-gallery"
           style={{ backgroundImage: `url(${portfolioImages[2]})` }}
-        ></div>
+        ></div> */}
       </div>
     </div>
   );

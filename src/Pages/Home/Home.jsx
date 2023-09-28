@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Carousel } from "../../Components/Carousel/Carousel";
-import { CarouselSmall } from "../../Components/CarouselSmall/CarouselSmall";
+// import { CarouselSmall } from "../../Components/CarouselSmall/CarouselSmall";
 
 import { Landing } from "../../Components/Landing/Landing";
 import { Segment1 } from "../../Components/Segment1/Segment1";
@@ -18,7 +18,7 @@ const Home = () => {
     <div className="page-container flex flex-col gap-5">
       <Landing />
       <Carousel />
-      <CarouselSmall />
+      {/* <CarouselSmall /> */}
       {/* <IconGallery /> */}
       <Segment1 info={info1} />
       <Segment2 info={info2} />
