@@ -1,4 +1,4 @@
-import "./project.css";
+import "./Project.css";
 import { useParams } from "react-router-dom";
 import { iconImages } from "../../Components/IconGallery/Icons";
 import { portfolioImages } from "../../assets/Portfolio/images";
