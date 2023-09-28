@@ -1,44 +1,68 @@
 import "./Project.css";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { iconImages } from "../../Components/IconGallery/Icons";
 import { portfolioImages } from "../../assets/Portfolio/images";
+import { projectList } from "../../assets/Portfolio/projects";
 export const Project = () => {
   const { project } = useParams();
 
-  const tech = [
+  const techIconImages = [
     { id: 1, name: "JavaScript", image: iconImages[0] },
 
     { id: 2, name: "Shopify", image: iconImages[1] },
     { id: 3, name: "Squarespace", image: iconImages[2] },
     { id: 4, name: "React", image: iconImages[3] },
+    { id: 5, name: "Wordpress", image: iconImages[4] },
+    { id: 5, name: "CSS", image: iconImages[5] },
+    { id: 5, name: "HTML", image: iconImages[6] },
+    { id: 5, name: "Elementor", image: iconImages[7] },
   ];
+
+  function findImageByName(name) {
+    // Use the Array.find() method to search for the first matching object
+    const foundImage = techIconImages.find(
+      (image) => image.name.toLowerCase() === name.toLowerCase()
+    );
+
+    return foundImage; // Returns the matching image object or undefined if not found
+  }
+
+  let x = findImageByName("Shopify");
+
+  console.log(x);
+
+  const proj = projectList[0];
+  console.log(proj);
 
   return (
     <div className="page-container project">
       <div className="project-header">
         <div className="project-header-text">
-          <small>Current Project</small>
+          <small>{proj.orientation}</small>
           <h1>
-            An eCommerce Website with a repertoire towards user experience{" "}
+            <span>{proj.title}|</span> {proj.headerSummary}
           </h1>
-          <p>
-            Fuel your creative ambitions with our live interactive workshops.
-            Spend a day with design business pros and walk away with knowledge
-            that lasts a lifetime. Fuel your creative ambitions with our live
-            interactive workshops. Spend a day with design business pros and
-            walk away with knowledge that lasts a lifetime.
-          </p>
-          <button className="btn">Visit Site</button>
+          <p>{proj.info}.</p>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={proj.link}
+            className="btn"
+          >
+            Visit Site
+          </a>
         </div>
         <div className="project-header-tech">
           <h3>Tech stack</h3>
 
-          {tech.map((item) => (
+          {proj.stack.map((item) => (
             <div key={item.id} className="project-tech">
               <div className="project-tech-icon">
-                <img src={item.image} alt={item.name} />
+                <img src={findImageByName(item).image} alt={item} />
               </div>
-              <div className="project-tech-name">{item.name}</div>
+              <div className="project-tech-name">
+                {findImageByName(item).name}
+              </div>
             </div>
           ))}
         </div>
@@ -46,11 +70,11 @@ export const Project = () => {
       <div className="project-images">
         <div
           className="project-gallery"
-          style={{ backgroundImage: `url(${portfolioImages[8]})` }}
+          style={{ backgroundImage: `url(${proj.img1})` }}
         ></div>
         <div
           className="project-gallery"
-          style={{ backgroundImage: `url(${portfolioImages[7]})` }}
+          style={{ backgroundImage: `url(${proj.img2})` }}
         ></div>
         {/* <div
           className="project-gallery"

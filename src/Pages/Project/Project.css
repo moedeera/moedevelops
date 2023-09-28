@@ -14,6 +14,9 @@
 
 .project-header-tech {
   border: 1px solid rgba(128, 128, 128, 0.5);
+  /* border: 1px solid red; */
+  max-width: 300px;
+  width: 100%;
   height: 100%;
   padding: 15px 10px;
   min-height: 350px;
@@ -21,7 +24,7 @@
 }
 .project-header-text {
   max-width: 900px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 .project h1 {
   font-family: "Source Serif 4", serif;
@@ -29,8 +32,8 @@
   margin-top: 20px;
 }
 .project p {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
   letter-spacing: 0.75px;
   line-height: 2em;
 }
@@ -42,6 +45,10 @@
   color: rgb(3, 3, 33);
   font-weight: 500;
   margin-bottom: 50px !important;
+}
+
+.project span {
+  color: #f9c349;
 }
 
 .project-tech {
@@ -83,11 +90,12 @@
 .project-gallery {
   height: 400px;
   width: 100%;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   border: 1px solid rgba(128, 128, 128, 0.25);
   border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 @media only screen and (min-width: 600px) {
   .project h1 {
