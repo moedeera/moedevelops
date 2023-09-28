@@ -10,17 +10,18 @@ import image5 from "./greenframe.png";
 import image6 from "./p6.png";
 import image7 from "./p7.png";
 import image8 from "./portfolio8.png";
+import { Link } from "react-router-dom";
 
 export const Portfolio = () => {
   const items = [
-    { id: 1, name: "Men's Fashion" },
-    { id: 2, name: "Local Diner" },
-    { id: 3, name: "Salon Website" },
-    { id: 4, name: "Fitness Website" },
-    { id: 5, name: "Online Learning" },
-    { id: 6, name: "Clothing" },
-    { id: 7, name: "Farm Website" },
-    { id: 8, name: "Niche Website" },
+    { id: 1, name: "Men's Fashion", link: "mensfashion" },
+    { id: 2, name: "Local Diner", link: "local" },
+    { id: 3, name: "Salon Website", link: "salon" },
+    { id: 4, name: "Fitness Website", link: "fitness" },
+    { id: 5, name: "Online Learning", link: "online" },
+    { id: 6, name: "Clothing", link: "clothing" },
+    { id: 7, name: "Farm Website", link: "farm" },
+    { id: 8, name: "Niche Website", link: "niche" },
   ];
 
   const imagesO = [
@@ -43,7 +44,8 @@ export const Portfolio = () => {
       <div className="portfolio-container">
         {items.map((item, index) => (
           <div key={item.id} className="portfolio-item">
-            <div
+            <Link
+              to={`/portfolio/${item.link}`}
               className="item-detail-box"
               style={{ backgroundImage: `url(${imagesO[index]})` }}
             >
@@ -56,7 +58,8 @@ export const Portfolio = () => {
                   <img src={images[1]} alt="" />
                 </div>
               </div>
-            </div>
+            </Link>
+
             <div className="item-details-cta">
               <small>{item.name}</small>
               <div className="item-icons-small">
