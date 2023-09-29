@@ -12,7 +12,7 @@ const template = {
   img2: null,
   img3: null,
   link: "",
-  color: "#f9c349",
+  color: "",
 };
 
 import { portfolioImages } from "./images";
@@ -27,13 +27,6 @@ const projectList = [
     headerSummary: `A digital publication store selling
       articles about men's fashion`,
     stack: ["wordpress", "elementor", "css", "html", "javascript"],
-    pics: [
-      {
-        label: "landing",
-        url: "http://440styling.com/wp-content/uploads/2023/09/selfcare.png",
-        location: "",
-      },
-    ],
     info: `Inspired by a shot on the website Dribbble.com,
     this was created using wordpress and the free version of Elementor.
     The original shot had to be redesigned to adjust for spacing and color.
@@ -54,13 +47,6 @@ const projectList = [
     title: "Super-Donair",
     headerSummary: `A simple but highly ranked website that gets the job done.`,
     stack: ["css", "html", "javascript"],
-    pics: [
-      {
-        label: "landing",
-        url: `${portfolioImages[0]}`,
-        location: "",
-      },
-    ],
     info: `
     A Website built for the Super-Donair diner in Saskatoon,
     This was built using CSS, HTML and JavaScript,
@@ -104,6 +90,23 @@ const projectList = [
     img3: "http://440styling.com/wp-content/uploads/2023/09/cp5.png",
     link: "https://greenframedesign.com/",
     color: "#23A455",
+  },
+  {
+    id: 4,
+    slug: "deercoded",
+    ref: null,
+    orientation: "Coding Bootcamp",
+    title: "DeerCoded",
+    headerSummary: "UI Design For A Coding Bootcamp",
+    stack: ["Javascript", "html", "css"],
+    info: `A Design oriented website built as a theme for a coding bootcamp. It was built using CSS, JavaScript and HTML.
+    The focus of the website is to experiment with new design trends involving landing page lottie animations and bubbly 3d illustrations.
+    It also uses a landing page countdown timer that visually channels urgency in a potential customer.`,
+    img1: `${portfolioImages[12]}`,
+    img2: "https://www.moedevelops.com/static/media/deercoded.e71d49fd71af940e01be.png",
+    img3: null,
+    link: "",
+    color: "#256EFF",
   },
 ];
 

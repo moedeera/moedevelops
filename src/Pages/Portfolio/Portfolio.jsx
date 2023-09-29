@@ -17,7 +17,7 @@ export const Portfolio = () => {
   const items = [
     { id: 1, name: "Men's Fashion", link: "440styling" },
     { id: 2, name: "Local Diner", link: "superdonair" },
-    { id: 3, name: "Salon Website", link: "salon" },
+    { id: 3, name: "Coding Bootcamp", link: "deercoded" },
     { id: 4, name: "Construction Website", link: "greenframe" },
     { id: 5, name: "Online Learning", link: "online" },
     { id: 6, name: "Clothing", link: "clothing" },
