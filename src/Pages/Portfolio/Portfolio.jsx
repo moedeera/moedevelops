@@ -2,22 +2,23 @@ import { images } from "../../assets/Images/Images";
 import { portfolioImages } from "../../assets/Portfolio/images";
 // import { Filter } from "./Filter/Filter";
 import "./Portfolio.css";
-import image1 from "./portfolio1.png";
+import image1 from "./p7.png";
 import image2 from "./super-donair.png";
-import image3 from "./portfolio3.png";
-import image4 from "./portfolio4.jpg";
-import image5 from "./greenframe.png";
-import image6 from "./p6.png";
-import image7 from "./p7.png";
+import image3 from "./p6.png";
+
+import image5 from "./portfolio4.jpg";
+import image4 from "./greenframe.png";
+import image6 from "./portfolio3.png";
+import image7 from "./portfolio1.png";
 import image8 from "./portfolio8.png";
 import { Link } from "react-router-dom";
 
 export const Portfolio = () => {
   const items = [
-    { id: 1, name: "Men's Fashion", link: "mensfashion" },
-    { id: 2, name: "Local Diner", link: "local" },
+    { id: 1, name: "Men's Fashion", link: "440styling" },
+    { id: 2, name: "Local Diner", link: "superdonair" },
     { id: 3, name: "Salon Website", link: "salon" },
-    { id: 4, name: "Fitness Website", link: "fitness" },
+    { id: 4, name: "Construction Website", link: "greenframe" },
     { id: 5, name: "Online Learning", link: "online" },
     { id: 6, name: "Clothing", link: "clothing" },
     { id: 7, name: "Farm Website", link: "farm" },
@@ -25,13 +26,12 @@ export const Portfolio = () => {
   ];
 
   const imagesO = [
-    image7,
-    image2,
     image1,
-
+    image2,
     image3,
     image4,
     image5,
+    image7,
     image6,
 
     image8,

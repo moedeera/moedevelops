@@ -3,8 +3,26 @@ import { Link, useParams } from "react-router-dom";
 import { iconImages } from "../../Components/IconGallery/Icons";
 import { portfolioImages } from "../../assets/Portfolio/images";
 import { projectList } from "../../assets/Portfolio/projects";
+import { useEffect, useState } from "react";
 export const Project = () => {
   const { project } = useParams();
+  const [currentProject, setCurrentProject] = useState(null);
+
+  const findProject = (name) => {
+    console.log(project, projectList[0].slug);
+
+    const match = projectList.find((project) => project.slug === name);
+    if (match) {
+      setCurrentProject(match);
+      console.log("match :", currentProject);
+    } else {
+      console.log("no match");
+    }
+  };
+
+  useEffect(() => {
+    findProject(project);
+  }, []);
 
   const techIconImages = [
     { id: 1, name: "JavaScript", image: iconImages[0] },
@@ -27,22 +45,21 @@ export const Project = () => {
     return foundImage; // Returns the matching image object or undefined if not found
   }
 
-  let x = findImageByName("Shopify");
-
-  console.log(x);
-
-  const proj = projectList[0];
-  console.log(proj);
-
+  const proj = currentProject;
+  // console.log(proj);
+  if (!proj) {
+    return <>Sorry No Such Project exists</>;
+  }
   return (
     <div className="page-container project">
       <div className="project-header">
         <div className="project-header-text">
           <small>{proj.orientation}</small>
           <h1>
-            <span>{proj.title}|</span> {proj.headerSummary}
+            <span style={{ color: `${proj.color}` }}>{proj.title}|</span>{" "}
+            {proj.headerSummary}
           </h1>
-          <p>{proj.info}.</p>
+          <p>{proj.info}</p>
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -76,10 +93,12 @@ export const Project = () => {
           className="project-gallery"
           style={{ backgroundImage: `url(${proj.img2})` }}
         ></div>
-        {/* <div
-          className="project-gallery"
-          style={{ backgroundImage: `url(${portfolioImages[2]})` }}
-        ></div> */}
+        {proj.img3 && (
+          <div
+            className="project-gallery"
+            style={{ backgroundImage: `url(${proj.img3}` }}
+          ></div>
+        )}
       </div>
     </div>
   );

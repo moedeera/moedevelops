@@ -95,7 +95,7 @@
   background-repeat: no-repeat;
   border: 1px solid rgba(128, 128, 128, 0.25);
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.01);
 }
 @media only screen and (min-width: 600px) {
   .project h1 {

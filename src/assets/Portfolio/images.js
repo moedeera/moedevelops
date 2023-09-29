@@ -7,9 +7,25 @@ import port6 from "./img6.jpg";
 import port7 from "./img7.png";
 import port8 from "./img8.png";
 import port9 from "./img9.png";
+import proj2c from "./super-donair-mobile.png";
+import proj2b from "./super-donair-p2.png";
+import proj2a from "./super-donair.png";
 // import * as natural from "natural";
 
-const images = [port1, port2, port3, port4, port5, port6, port7, port8, port9];
+const images = [
+  port1, // 0
+  port2, // 1
+  port3, // 2
+  port4, // 3
+  port5, // 4
+  port6, // 5
+  port7, //6
+  port8, // 7
+  port9, // 8
+  proj2a, // 9
+  proj2b, // 10
+  proj2c, // 11
+];
 
 // function findClosestImageSource(source) {
 //   const sourceKeys = Object.keys(images);
