@@ -93,6 +93,27 @@ const projectList = [
   },
   {
     id: 4,
+    slug: "radiologymanual",
+    ref: null,
+    orientation: "Radiology Website",
+    title: "Radiology Manual",
+    headerSummary: "Full Stack Academic website",
+    stack: ["React", "CSS", "HTML"],
+    pics: [{ label: "", url: "", location: "" }],
+    info: `The Radiology Manual is a website that I developed using the powerful MERN stack (MongoDB, Express.js, React, and Node.js).
+    Inspired by a video showcased on "dribbble.com",
+    the website features a visually appealing layout and user-friendly
+    interface. The styling, although accomplished using basic CSS, provides an 
+    elegant and intuitive user experience.
+     The primary objective of The Radiology Manual is to serve as a centralized repository for articles related to radiology, making it a valuable resource for anyone interested in the field. With a commitment to offering free radiology learning materials, it aims to empower enthusiasts, students, and professionals alike, fostering a vibrant community of knowledge sharing and skill development.`,
+    img1: `${portfolioImages[13]}`,
+    img2: `${portfolioImages[14]}`,
+    img3: null,
+    link: "https://radiologymanual-420b89f04c5f.herokuapp.com",
+    color: "black",
+  },
+  {
+    id: 5,
     slug: "deercoded",
     ref: null,
     orientation: "Coding Bootcamp",

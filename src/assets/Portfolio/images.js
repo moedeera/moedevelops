@@ -11,6 +11,8 @@ import proj2c from "./super-donair-mobile.png";
 import proj2b from "./super-donair-p2.png";
 import proj2a from "./super-donair.png";
 import proj3a from "./p6.png";
+import radiology1 from "./sc1.png";
+import radiology2 from "./sc2.png";
 // import * as natural from "natural";
 
 const images = [
@@ -27,6 +29,8 @@ const images = [
   proj2b, // 10
   proj2c, // 11
   proj3a, //12
+  radiology1, //13
+  radiology2, //14
 ];
 
 // function findClosestImageSource(source) {
