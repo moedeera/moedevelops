@@ -4,6 +4,7 @@
   width: 85%;
   margin: 0 auto;
   color: black;
+  padding-right: 10px;
 }
 .segment-3 h1 {
   font-family: "Source Serif 4", serif;
@@ -11,6 +12,8 @@
   letter-spacing: -0.5px;
   font-size: var(--headerSM) !important;
   margin-top: 15px;
+  margin-bottom: 10px;
+  line-height: 1.3em;
 }
 
 .segment-3 small {
@@ -21,6 +24,10 @@
   color: rgb(3, 3, 33);
   font-weight: 500;
   margin-bottom: 50px !important;
+}
+
+.segment-3 p {
+  line-height: 1.8em;
 }
 @media only screen and (min-width: 600px) {
   .segment-3 h1 {
