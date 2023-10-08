@@ -33,7 +33,6 @@ export const Portfolio = () => {
     image5,
     image7,
     image6,
-
     image8,
   ];
 

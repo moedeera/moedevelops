@@ -27,7 +27,7 @@ export const Navbar = () => {
             <div className="hidden md:block">
               <h3 style={{ fontWeight: "900" }}>
                 <Link to={"/"}>
-                  Moe<span className="text-primary">Develops</span>
+                  Develop<span className="text-primary">with</span>Moe
                 </Link>
               </h3>
             </div>

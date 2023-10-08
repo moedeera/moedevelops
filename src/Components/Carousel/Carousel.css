@@ -13,8 +13,10 @@
   position: relative;
   width: 45%;
   min-width: 250px;
-  max-width: 350px;
-  height: 300px;
+  max-width: 300px;
+  min-height: 150px;
+  height: 30vh;
+  max-height: 285px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +28,7 @@
   cursor: pointer;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   border: 1px solid rgba(128, 128, 128, 0.25);
   overflow: hidden;
 }

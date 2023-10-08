@@ -1,5 +1,6 @@
 import "./Carousel.css";
 import { portfolioImages } from "../../assets/Portfolio/images";
+import { portImages } from "../../Pages/Portfolio/portfolioImages";
 
 export const Carousel = () => {
   const items = [
@@ -61,15 +62,11 @@ export const Carousel = () => {
             key={item.name}
             className={`carousel-item `}
             style={{
-              backgroundImage: `url("${portfolioImages[index]}")`,
+              backgroundImage: `url("${portImages[index]}")`,
             }}
           >
             <div className="item-info">
-              {/* <h3>{item.name} Website</h3> */}
               <div className="icons"></div>
-
-              {/* <small>Click to View</small> */}
-              {/* <button className="btn btn-alt">View</button> */}
             </div>
           </div>
         ))}
