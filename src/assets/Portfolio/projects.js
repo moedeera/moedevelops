@@ -126,7 +126,7 @@ const projectList = [
     img1: `${portfolioImages[12]}`,
     img2: "https://www.moedevelops.com/static/media/deercoded.e71d49fd71af940e01be.png",
     img3: null,
-    link: "",
+    link: "https://deercoded.com",
     color: "#256EFF",
   },
 ];

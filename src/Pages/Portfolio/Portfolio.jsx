@@ -3,12 +3,7 @@ import { portfolioImages } from "../../assets/Portfolio/images";
 // import { Filter } from "./Filter/Filter";
 import { projectList } from "../../assets/Portfolio/projects";
 import "./Portfolio.css";
-import image1 from "./p7.png";
-import image2 from "./super-donair.png";
-import image3 from "./p6.png";
 
-import image5 from "./portfolio4.jpg";
-import image4 from "./greenframe.png";
 import image6 from "./portfolio3.png";
 import image7 from "./portfolio1.png";
 import image8 from "./portfolio8.png";
@@ -45,7 +40,7 @@ export const Portfolio = () => {
         {projectList.map((proj) => (
           <div key={proj.id} className="portfolio-item">
             <Link
-              to={`/portfolio/${proj.link}`}
+              to={`/portfolio/${proj.slug}`}
               className="item-detail-box"
               style={{ backgroundImage: `url(${proj.img1})` }}
             >
