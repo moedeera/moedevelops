@@ -39,4 +39,8 @@
   .segment-2-upper h1 {
     font-size: var(--headerMD);
   }
+  .segment-2-ls {
+    padding: 30px 20px 60px;
+    line-height: 1.6em;
+  }
 }

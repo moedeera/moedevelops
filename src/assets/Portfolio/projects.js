@@ -106,8 +106,8 @@ const projectList = [
     interface. The styling, although accomplished using basic CSS, provides an 
     elegant and intuitive user experience.
      The primary objective of The Radiology Manual is to serve as a centralized repository for articles related to radiology, making it a valuable resource for anyone interested in the field. With a commitment to offering free radiology learning materials, it aims to empower enthusiasts, students, and professionals alike, fostering a vibrant community of knowledge sharing and skill development.`,
-    img1: `${portfolioImages[13]}`,
-    img2: `${portfolioImages[14]}`,
+    img1: `${portfolioImages[14]}`,
+    img2: `${portfolioImages[13]}`,
     img3: null,
     link: "https://radiologymanual-420b89f04c5f.herokuapp.com",
     color: "black",

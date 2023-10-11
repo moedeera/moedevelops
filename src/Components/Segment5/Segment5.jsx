@@ -12,11 +12,8 @@ export const Segment5 = ({ info }) => {
           <h3>{item.header}</h3>
           <p>{item.text}</p>
           <div className="segment-5-button-container">
-            <Link to={"/"} className="btn">
+            <Link to={`${item.link1}`} className="btn">
               {item.button1}
-            </Link>
-            <Link to={"/"} className="btn btn-alt">
-              {item.button2}
             </Link>
           </div>
         </div>

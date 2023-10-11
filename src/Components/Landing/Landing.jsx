@@ -16,12 +16,16 @@ export const Landing = () => {
     <div className="landing ">
       <div>
         {" "}
-        <small>Design websites with functionality in mind</small>
+        <small>Building Quality Websites</small>
       </div>
       <h1 className="header-title">
         Web Development <br></br> Solutions
       </h1>
-      {/* <p>Design. Develop. Deploy</p> */}
+
+      <p>
+        Whether it is an eCommerce website or a personal portfolio, <br /> I
+        will help you find the right solution that suites your needs
+      </p>
       <Link to={"/portfolio"}>
         <button className="btn">See Portfolio</button>
       </Link>

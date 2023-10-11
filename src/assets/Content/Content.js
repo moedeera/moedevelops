@@ -11,27 +11,25 @@ const segment1info = {
 };
 
 const segment2info = {
-  header: `A Better way to build a website`,
+  header: `3 Steps to a better website`,
   texts: [
     {
-      header: "The #1 job board for design talent",
-      text: ` Get your job listings in front of millions of top-rated designers
-      looking for their next role with an average of 1.1K targeted clicks
-      per month.`,
+      header: "1.Schedule a Consultation",
+      text: `This initial step is vital, 
+      involving in-depth discussions with the client to grasp their objectives, target
+      audience, and functional requirements. It sets the project's direction.`,
       button: "",
     },
     {
-      header: "The #1 job board for design talent",
-      text: ` Get your job listings in front of millions of top-rated designers
-      looking for their next role with an average of 1.1K targeted clicks
-      per month.`,
+      header: "2.Draft Proposal",
+      text: `After understanding the client's vision, a preliminary design or mockup is created. This visual representation allows clients to provide feedback
+      and make necessary adjustments before actual development begins.`,
       button: "",
     },
     {
-      header: "The #1 job board for design talent",
-      text: ` Get your job listings in front of millions of top-rated designers
-      looking for their next role with an average of 1.1K targeted clicks
-      per month.`,
+      header: "3.Development",
+      text: `With the client's approval, the website development phase commences. 
+      Constant monitoring ensures all features function as intended, and any issues are swiftly addressed, guaranteeing a seamless user experience.`,
       button: "",
     },
   ],
@@ -39,28 +37,28 @@ const segment2info = {
 
 const segment4info = {
   quote:
-    "Dribbble is my go-to for hiring designers. It always provides a wealth of quality candidates and instantly builds my pipeline",
-  author: "Lee Monroe",
-  position: "Head of design, OneSignal",
+    "I strive for two things in design: simplicity and clarity. Great design is born of those two things.",
+  author: "Linden Leader",
+  position: "Designer behind the legendary FedEx logo with the secret arrow",
 };
 
 const segment5info = [
   {
     id: 1,
-    small: "Need work on your website?",
-    header: "Get started with me today",
-    text: "Browse new design jobs or boost your portfolio to get discovered.",
+    small: "Need your website analyzed?",
+    header: "Review your website",
+    text: "Book a consultation and find out how you can improve your website today.",
     button1: "Contact",
-    button2: "Get Discovered",
+    link1: "/contact",
     color: "#ffda79",
   },
   {
     id: 2,
     small: "My Latest Blog",
     header: "Designing Real Estate Websites",
-    text: "Browse new design jobs or boost your portfolio to get discovered.",
-    button1: "See more",
-    button2: "Book Consult",
+    text: "What are the keys to a good real estate website? find out in my latest blog.",
+    button1: "Read more",
+    link1: "/",
     color: "#ff8be7",
   },
 ];
