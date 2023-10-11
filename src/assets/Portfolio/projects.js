@@ -129,6 +129,23 @@ const projectList = [
     link: "https://deercoded.com",
     color: "#256EFF",
   },
+  {
+    id: 6,
+    slug: "Vethalia",
+    ref: null,
+    orientation: "Natural Health Website",
+    title: "DeerCoded",
+    headerSummary: "UI Design For A Coding Bootcamp",
+    stack: ["Javascript", "html", "css"],
+    info: `A Design oriented website built as a theme for a coding bootcamp. It was built using CSS, JavaScript and HTML.
+    The focus of the website is to experiment with new design trends involving landing page lottie animations and bubbly 3d illustrations.
+    It also uses a landing page countdown timer that visually channels urgency in a potential customer.`,
+    img1: `${portfolioImages[12]}`,
+    img2: "https://www.moedevelops.com/static/media/deercoded.e71d49fd71af940e01be.png",
+    img3: null,
+    link: "https://deercoded.com",
+    color: "#256EFF",
+  },
 ];
 
 export { projectList as projectList };
