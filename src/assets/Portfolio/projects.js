@@ -21,7 +21,7 @@ const projectList = [
   {
     id: 0,
     slug: "440styling",
-    ref: null,
+    ref: "440styling",
     orientation: "Fashion",
     title: "440styling",
     headerSummary: `A digital publication store selling
@@ -38,11 +38,12 @@ const projectList = [
     img1: "http://440styling.com/wp-content/uploads/2023/09/440styling.png",
     img2: "http://440styling.com/wp-content/uploads/2023/09/Screenshot-2023-09-28-030818.png",
     img3: null,
+    color: "#F9C349",
   },
   {
     id: 2,
     slug: "superdonair",
-    ref: null,
+    ref: "superdonair",
     orientation: "Restaurant",
     title: "Super-Donair",
     headerSummary: `A simple but highly ranked website that gets the job done.`,
@@ -65,7 +66,7 @@ const projectList = [
   {
     id: 3,
     slug: "greenframe",
-    ref: null,
+    ref: "greenframe",
     orientation: "Construction",
     title: "Greenframe Design ",
     headerSummary: `Renovation company website that bolsters
@@ -94,7 +95,7 @@ const projectList = [
   {
     id: 4,
     slug: "radiologymanual",
-    ref: null,
+    ref: "radiology",
     orientation: "Radiology Website",
     title: "Radiology Manual",
     headerSummary: "Full Stack Academic website",
@@ -115,7 +116,7 @@ const projectList = [
   {
     id: 5,
     slug: "deercoded",
-    ref: null,
+    ref: "deercoded",
     orientation: "Coding Bootcamp",
     title: "DeerCoded",
     headerSummary: "UI Design For A Coding Bootcamp",
@@ -132,7 +133,7 @@ const projectList = [
   {
     id: 6,
     slug: "Vethalia",
-    ref: null,
+    ref: "vethalia",
     orientation: "Natural Health Website",
     title: "DeerCoded",
     headerSummary: "UI Design For A Coding Bootcamp",
@@ -143,7 +144,7 @@ const projectList = [
     img1: `${portfolioImages[12]}`,
     img2: "https://www.moedevelops.com/static/media/deercoded.e71d49fd71af940e01be.png",
     img3: null,
-    link: "https://deercoded.com",
+    link: "https://vethalia.com",
     color: "#256EFF",
   },
 ];

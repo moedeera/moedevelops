@@ -1,5 +1,9 @@
 import { images } from "../../assets/Images/Images";
-import { portfolioImages } from "../../assets/Portfolio/images";
+import {
+  findImageSet,
+  imagesSorted,
+  portfolioImages,
+} from "../../assets/Portfolio/images";
 // import { Filter } from "./Filter/Filter";
 import { projectList } from "../../assets/Portfolio/projects";
 import "./Portfolio.css";
@@ -21,6 +25,7 @@ export const Portfolio = () => {
     { id: 8, name: "Niche Website", link: "niche" },
   ];
   console.log(projectList);
+
   const imagesO = [
     // image1,
     // image2,
@@ -42,7 +47,11 @@ export const Portfolio = () => {
             <Link
               to={`/portfolio/${proj.slug}`}
               className="item-detail-box"
-              style={{ backgroundImage: `url(${proj.img1})` }}
+              style={{
+                backgroundImage: `url(${
+                  findImageSet(proj.ref, imagesSorted)[0]
+                })`,
+              }}
             >
               <div className="detail-box-overlay">
                 <h3>{proj.orientation}</h3>
@@ -68,7 +77,7 @@ export const Portfolio = () => {
             </div>
           </div>
         ))}
-        {items.map((item, index) => (
+        {/* {items.map((item, index) => (
           <div key={item.id} className="portfolio-item">
             <Link
               to={`/portfolio/${item.link}`}
@@ -98,7 +107,7 @@ export const Portfolio = () => {
               </div>
             </div>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );

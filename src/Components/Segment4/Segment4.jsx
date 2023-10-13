@@ -2,7 +2,6 @@ import "./Segment4.css";
 import author from "./author.jpg";
 
 export const Segment4 = ({ info }) => {
-  console.log(info);
   return (
     <div className="segment-4">
       <div className="segment-4-text">

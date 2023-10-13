@@ -12,6 +12,7 @@ import { SiteContextProvider } from "./Context/Context";
 // import { AnimatePresence } from "framer-motion";
 import { Content } from "./Pages/Content/Content";
 import { Project } from "./Pages/Project/Project";
+import ScrollToTop from "./Components/Scroll/Scroll";
 
 function App() {
   return (
@@ -19,17 +20,18 @@ function App() {
       <Router>
         <Navbar />
 
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/admin" element={<Content />} />
-          <Route path="/portfolio/:project" element={<Project />} />
-        </Routes>
-
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/admin" element={<Content />} />
+            <Route path="/portfolio/:project" element={<Project />} />
+          </Routes>
+        </ScrollToTop>
         <Footer />
       </Router>
     </SiteContextProvider>

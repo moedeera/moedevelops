@@ -108,6 +108,10 @@
   .portfolio-page h1 {
     font-size: var(--headerMD) !important;
   }
+
+  .item-detail-box {
+    background-size: cover;
+  }
 }
 
 @media only screen and (min-width: 900px) {
