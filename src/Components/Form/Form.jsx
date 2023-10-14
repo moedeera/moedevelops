@@ -2,11 +2,13 @@ import "./Form.css";
 import { db } from "../../firebase-config";
 import { useEffect, useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
+import { projectList } from "../../assets/Portfolio/projects";
 
 export const Form = () => {
   const [sent, setSent] = useState(false);
   const [count, setCount] = useState(1);
   const messageData = collection(db, "msg");
+  const projectData = collection(db, "projects");
   // console.log(messageData);
   const [msg, setMessage] = useState({
     name: "",
@@ -21,6 +23,43 @@ export const Form = () => {
       setUserInfo({ ...userInfo, email: e.target.value });
     } else if (type === "message") {
       setUserInfo({ ...userInfo, message: e.target.value });
+    }
+  };
+
+  // project send-- one time program
+
+  const submitAllProjects = async () => {
+    const alreadySubmitted = localStorage.getItem("confirmation");
+
+    if (alreadySubmitted) {
+      console.log("submission status", true);
+      return;
+    }
+    try {
+      await addDoc(projectData, {
+        id: 2,
+        slug: "superdonair",
+        ref: "superdonair",
+        orientation: "Restaurant",
+        title: "Super-Donair",
+        headerSummary: `A simple but highly ranked website that gets the job done.`,
+        stack: ["css", "html", "javascript"],
+        info: `
+      A Website built for the Super-Donair diner in Saskatoon,
+      This was built using CSS, HTML and JavaScript,
+      The client insisted on a simple design without any advanced features.
+      The website is maintained and updated manually by me.    
+      The website is highly ranked in the google search algorithm and is the
+      first diner to show up for the  “donair search” in Saskatoon.
+      `,
+        link: "https://super-donair.com/",
+        color: "crimson",
+      });
+
+      localStorage.setItem("confirmation", true);
+      console.log("sent");
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -51,6 +90,9 @@ export const Form = () => {
     return () => clearInterval(interval);
   }, [count, setMessage]);
 
+  useEffect(() => {
+    submitAllProjects();
+  }, []);
   return (
     <div className="form">
       <div className="input-section">
