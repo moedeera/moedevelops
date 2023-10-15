@@ -17,9 +17,9 @@ export const Project = () => {
     const match = projects.find((project) => project.slug === name);
     if (match) {
       setCurrentProject(match);
-      // console.log("match :", currentProject);
+      console.log("match :", currentProject);
     } else {
-      console.log("no match");
+      console.log("no match for", name);
     }
   };
 
