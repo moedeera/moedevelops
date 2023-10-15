@@ -53,10 +53,10 @@ const imagesSorted = [
       "http://440styling.com/wp-content/uploads/2023/09/440styling.png",
     ],
   },
-  { id: "deercoded", images: [proj3a] },
+  { id: "deercoded", images: [proj3a, null] },
   { id: "radiology", images: [radiology2, radiology1] },
   { id: "superdonair", images: [proj2d, proj2a, proj2b, proj2c] },
-  { id: "vethalia", images: [vethalia1] },
+  { id: "vethalia", images: [vethalia1, null] },
   {
     id: "greenframe",
     images: [

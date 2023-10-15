@@ -8,9 +8,10 @@ import { db } from "../../firebase-config";
 
 export const Content = () => {
   const { user, logState } = useContext(SiteContext);
-  const [sent, setSent] = useState(false);
+
   const [showMessages, setMessageShow] = useState(false);
   const messageData = collection(db, "msg");
+
   const [messages, setMessages] = useState([]);
 
   const getMessages = async () => {
@@ -25,6 +26,7 @@ export const Content = () => {
       console.log(error);
     }
   };
+
   return (
     <div className="page-container content-page">
       {logState ? (

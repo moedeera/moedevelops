@@ -118,6 +118,10 @@
   }
 
   .project-images {
-    grid-template-columns: 1fr 1fr 1FR;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .project-gallery {
+    background-position: cover;
   }
 }

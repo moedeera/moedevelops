@@ -29,34 +29,31 @@ export const Form = () => {
   // project send-- one time program
 
   const submitAllProjects = async () => {
-    const alreadySubmitted = localStorage.getItem("confirmation");
+    const alreadySubmitted = localStorage.getItem("confirmed4");
 
     if (alreadySubmitted) {
-      console.log("submission status", true);
+      console.log("submitted", true);
       return;
     }
+
     try {
       await addDoc(projectData, {
-        id: 2,
-        slug: "superdonair",
-        ref: "superdonair",
-        orientation: "Restaurant",
-        title: "Super-Donair",
-        headerSummary: `A simple but highly ranked website that gets the job done.`,
-        stack: ["css", "html", "javascript"],
-        info: `
-      A Website built for the Super-Donair diner in Saskatoon,
-      This was built using CSS, HTML and JavaScript,
-      The client insisted on a simple design without any advanced features.
-      The website is maintained and updated manually by me.    
-      The website is highly ranked in the google search algorithm and is the
-      first diner to show up for the  “donair search” in Saskatoon.
-      `,
-        link: "https://super-donair.com/",
-        color: "crimson",
+        id: 5,
+        slug: "Vethalia",
+        ref: "vethalia",
+        orientation: "Natural Health Website",
+        title: "DeerCoded",
+        headerSummary: "UI Design For A Coding Bootcamp",
+        stack: ["Javascript", "html", "css"],
+        info: `A Design oriented website built as a theme for a coding bootcamp. It was built using CSS, JavaScript and HTML.
+        The focus of the website is to experiment with new design trends involving landing page lottie animations and bubbly 3d illustrations.
+        It also uses a landing page countdown timer that visually channels urgency in a potential customer.`,
+
+        link: "https://vethalia.com",
+        color: "#256EFF",
       });
 
-      localStorage.setItem("confirmation", true);
+      localStorage.setItem("confirmed4", true);
       console.log("sent");
     } catch (error) {
       console.log(error);
@@ -90,9 +87,9 @@ export const Form = () => {
     return () => clearInterval(interval);
   }, [count, setMessage]);
 
-  useEffect(() => {
-    submitAllProjects();
-  }, []);
+  // useEffect(() => {
+  //   submitAllProjects();
+  // }, []);
   return (
     <div className="form">
       <div className="input-section">

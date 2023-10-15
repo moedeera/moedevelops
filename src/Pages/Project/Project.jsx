@@ -4,6 +4,7 @@ import { iconImages } from "../../Components/IconGallery/Icons";
 
 import { projectList } from "../../assets/Portfolio/projects";
 import { useEffect, useState } from "react";
+import { findImageSet, imagesSorted } from "../../assets/Portfolio/images";
 export const Project = () => {
   const { project } = useParams();
   const [currentProject, setCurrentProject] = useState(null);
@@ -87,18 +88,18 @@ export const Project = () => {
       <div className="project-images">
         <div
           className="project-gallery"
-          style={{ backgroundImage: `url(${proj.img1})` }}
+          style={{
+            backgroundImage: `url(${findImageSet(proj.ref, imagesSorted)[0]})`,
+          }}
         ></div>
-        <div
+        {/* <div
           className="project-gallery"
-          style={{ backgroundImage: `url(${proj.img2})` }}
-        ></div>
-        {proj.img3 && (
-          <div
-            className="project-gallery"
-            style={{ backgroundImage: `url(${proj.img3}` }}
-          ></div>
-        )}
+          style={{
+            backgroundImage: `url(${
+              findImageByName(proj.ref, imagesSorted)[1]
+            })`,
+          }}
+        ></div> */}
       </div>
     </div>
   );

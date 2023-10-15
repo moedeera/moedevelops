@@ -41,7 +41,7 @@ const projectList = [
     color: "#F9C349",
   },
   {
-    id: 2,
+    id: 1,
     slug: "superdonair",
     ref: "superdonair",
     orientation: "Restaurant",
@@ -64,7 +64,7 @@ const projectList = [
     color: "crimson",
   },
   {
-    id: 3,
+    id: 2,
     slug: "greenframe",
     ref: "greenframe",
     orientation: "Construction",
@@ -93,7 +93,7 @@ const projectList = [
     color: "#23A455",
   },
   {
-    id: 4,
+    id: 3,
     slug: "radiologymanual",
     ref: "radiology",
     orientation: "Radiology Website",
@@ -114,7 +114,7 @@ const projectList = [
     color: "black",
   },
   {
-    id: 5,
+    id: 4,
     slug: "deercoded",
     ref: "deercoded",
     orientation: "Coding Bootcamp",
@@ -131,7 +131,7 @@ const projectList = [
     color: "#256EFF",
   },
   {
-    id: 6,
+    id: 5,
     slug: "Vethalia",
     ref: "vethalia",
     orientation: "Natural Health Website",
