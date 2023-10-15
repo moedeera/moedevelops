@@ -1,33 +1,48 @@
 import "./Project.css";
 import { Link, useParams } from "react-router-dom";
 import { iconImages } from "../../Components/IconGallery/Icons";
-
 import { projectList } from "../../assets/Portfolio/projects";
 import { useEffect, useState } from "react";
 import { findImageSet, imagesSorted } from "../../assets/Portfolio/images";
+import { db } from "../../firebase-config";
+import { collection, getDocs } from "firebase/firestore";
 export const Project = () => {
   const { project } = useParams();
   const [currentProject, setCurrentProject] = useState(null);
+  const projectData = collection(db, "collection");
 
-  const findProject = (name) => {
-    console.log(project, projectList[0].slug);
+  const findProject = (name, projects) => {
+    // console.log(project, projectList[0].slug);
 
-    const match = projectList.find((project) => project.slug === name);
+    const match = projects.find((project) => project.slug === name);
     if (match) {
       setCurrentProject(match);
-      console.log("match :", currentProject);
+      // console.log("match :", currentProject);
     } else {
       console.log("no match");
     }
   };
 
+  const getProjectData = async () => {
+    try {
+      const data = await getDocs(projectData);
+
+      const filteredData = data.docs.map((doc) => ({ ...doc.data() }));
+
+      findProject(project, filteredData);
+    } catch (error) {
+      console.log("error:", error);
+
+      findProject(project, projectList);
+    }
+  };
+
   useEffect(() => {
-    findProject(project);
+    getProjectData();
   }, []);
 
   const techIconImages = [
     { id: 1, name: "JavaScript", image: iconImages[0] },
-
     { id: 2, name: "Shopify", image: iconImages[1] },
     { id: 3, name: "Squarespace", image: iconImages[2] },
     { id: 4, name: "React", image: iconImages[3] },
@@ -92,14 +107,12 @@ export const Project = () => {
             backgroundImage: `url(${findImageSet(proj.ref, imagesSorted)[0]})`,
           }}
         ></div>
-        {/* <div
+        <div
           className="project-gallery"
           style={{
-            backgroundImage: `url(${
-              findImageByName(proj.ref, imagesSorted)[1]
-            })`,
+            backgroundImage: `url(${findImageSet(proj.ref, imagesSorted)[1]})`,
           }}
-        ></div> */}
+        ></div>
       </div>
     </div>
   );

@@ -79,6 +79,7 @@ function findImageSet(ref, imagesSorted) {
 
   if (found) {
     match = imagesSorted.find((img) => img.id === ref);
+
     return match.images;
   } else {
     return imagesSorted.images[0];
