@@ -9,7 +9,7 @@ import { collection, getDocs } from "firebase/firestore";
 export const Project = () => {
   const { project } = useParams();
   const [currentProject, setCurrentProject] = useState(null);
-  const projectData = collection(db, "collection");
+  const projectData = collection(db, "projects");
 
   const findProject = (name, projects) => {
     // console.log(project, projectList[0].slug);
@@ -17,9 +17,9 @@ export const Project = () => {
     const match = projects.find((project) => project.slug === name);
     if (match) {
       setCurrentProject(match);
-      console.log("match :", currentProject);
+      console.log(name, "match :", match);
     } else {
-      console.log("no match for", name);
+      console.log("no match for", name, "from", projects);
     }
   };
 
@@ -28,7 +28,7 @@ export const Project = () => {
       const data = await getDocs(projectData);
 
       const filteredData = data.docs.map((doc) => ({ ...doc.data() }));
-
+      console.log("success", filteredData);
       findProject(project, filteredData);
     } catch (error) {
       console.log("error:", error);
@@ -88,7 +88,7 @@ export const Project = () => {
         <div className="project-header-tech">
           <h3>Tech stack</h3>
 
-          {proj.stack.map((item) => (
+          {proj?.stack?.map((item) => (
             <div key={item.id} className="project-tech">
               <div className="project-tech-icon">
                 <img src={findImageByName(item).image} alt={item} />
