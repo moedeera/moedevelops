@@ -9,6 +9,8 @@
   color: black;
   background-color: white;
   height: 85vh;
+  animation: fadeIntoScreen 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 .landing h1 {

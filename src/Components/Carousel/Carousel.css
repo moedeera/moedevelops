@@ -5,6 +5,8 @@
   width: 200vw;
   transition: all 0.35s ease-in-out;
   margin: 20px 0px 50px;
+  animation: fadeIntoScreen 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 .carousel:hover {
   animation-play-state: paused;
