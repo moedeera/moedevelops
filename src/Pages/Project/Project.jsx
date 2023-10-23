@@ -6,9 +6,11 @@ import { useEffect, useState } from "react";
 import { findImageSet, imagesSorted } from "../../assets/Portfolio/images";
 import { db } from "../../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
+import { Loading } from "../../Components/Loading/Loading";
 export const Project = () => {
   const { project } = useParams();
   const [currentProject, setCurrentProject] = useState(null);
+  const [loading, setLoading] = useState(true);
   const projectData = collection(db, "projects");
 
   const findProject = (name, projects) => {
@@ -35,6 +37,7 @@ export const Project = () => {
 
       findProject(project, projectList);
     }
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -63,6 +66,11 @@ export const Project = () => {
 
   const proj = currentProject;
   // console.log(proj);
+
+  if (loading) {
+    return <Loading />;
+  }
+
   if (!proj) {
     return <>Sorry No Such Project exists</>;
   }
