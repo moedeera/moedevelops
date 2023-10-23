@@ -15,11 +15,6 @@ import { Link } from "react-router-dom";
 
 export const Portfolio = () => {
   const items = [
-    // { id: 1, name: "Men's Fashion", link: "440styling" },
-    // { id: 2, name: "Local Diner", link: "superdonair" },
-    // { id: 3, name: "Coding Bootcamp", link: "deercoded" },
-    // { id: 4, name: "Construction Website", link: "greenframe" },
-    // { id: 5, name: "Online Learning", link: "online" },
     { id: 6, name: "Clothing", link: "clothing" },
     { id: 7, name: "Farm Website", link: "farm" },
     { id: 8, name: "Niche Website", link: "niche" },
@@ -77,37 +72,6 @@ export const Portfolio = () => {
             </div>
           </div>
         ))}
-        {/* {items.map((item, index) => (
-          <div key={item.id} className="portfolio-item">
-            <Link
-              to={`/portfolio/${item.link}`}
-              className="item-detail-box"
-              style={{ backgroundImage: `url(${imagesO[index]})` }}
-            >
-              <div className="detail-box-overlay">
-                <h3>{item.name}</h3>
-                <div className="item-icon">
-                  <img src={images[3]} alt="" />
-                </div>
-                <div className="item-icon">
-                  <img src={images[1]} alt="" />
-                </div>
-              </div>
-            </Link>
-
-            <div className="item-details-cta">
-              <small>{item.name}</small>
-              <div className="item-icons-small">
-                <div className="item-icon">
-                  <img src={images[0]} alt="" />
-                </div>
-                <div className="item-icon">
-                  <img src={images[2]} alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        ))} */}
       </div>
     </div>
   );
