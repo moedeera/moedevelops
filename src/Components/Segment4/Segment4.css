@@ -25,6 +25,7 @@
   font-weight: bold;
 }
 .segment-4-author-pic {
+  display: none;
 }
 .segment-4-author-pic img {
   height: 65px;
