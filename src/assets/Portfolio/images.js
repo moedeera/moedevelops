@@ -11,9 +11,14 @@ import proj2c from "./super-donair-mobile.png";
 import proj2b from "./super-donair-p2.png";
 import proj2a from "./super-donair.png";
 import proj3a from "./p6.png";
+import deercoded2 from "./dc1.png";
+import deercoded3 from "./dc2.png";
 import style440 from "../../Pages/Portfolio/p7.png";
+import s440p0 from "./440style0.jpg";
 import proj2d from "../../Pages/Portfolio/super-donair.png";
 import vethalia1 from "./vethalia1.png";
+import vethalia2 from "./veth2.png";
+import vethalia3 from "./veth3.png";
 import radiology1 from "./sc1.png";
 import radiology2 from "./sc2.png";
 import greenframe1 from "../../Pages/Portfolio/greenframe.png";
@@ -47,16 +52,12 @@ const imagesSorted = [
   },
   {
     id: "440styling",
-    images: [
-      style440,
-      port7,
-      "http://440styling.com/wp-content/uploads/2023/09/440styling.png",
-    ],
+    images: [style440, s440p0, null],
   },
-  { id: "deercoded", images: [proj3a, null] },
-  { id: "radiology", images: [radiology2, radiology1] },
+  { id: "deercoded", images: [proj3a, deercoded2, deercoded3] },
+  { id: "radiology", images: [radiology2, radiology1, null] },
   { id: "superdonair", images: [proj2d, proj2a, proj2b, proj2c] },
-  { id: "vethalia", images: [vethalia1, null] },
+  { id: "vethalia", images: [vethalia2, vethalia3, vethalia1] },
   {
     id: "greenframe",
     images: [
