@@ -103,13 +103,13 @@ export const Portfolio = () => {
               }}
             >
               <div className="detail-box-overlay">
-                <h3>{proj.orientation}</h3>
-                <div className="item-icon">
+                <h3>{proj.name}</h3>
+                {/* <div className="item-icon">
                   <img src={images[3]} alt="" />
                 </div>
                 <div className="item-icon">
                   <img src={images[1]} alt="" />
-                </div>
+                </div> */}
               </div>
             </Link>
 
