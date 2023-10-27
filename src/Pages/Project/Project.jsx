@@ -121,6 +121,12 @@ export const Project = () => {
             backgroundImage: `url(${findImageSet(proj.ref, imagesSorted)[1]})`,
           }}
         ></div>
+        <div
+          className="project-gallery"
+          style={{
+            backgroundImage: `url(${findImageSet(proj.ref, imagesSorted)[2]})`,
+          }}
+        ></div>
       </div>
     </div>
   );

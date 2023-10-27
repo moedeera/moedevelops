@@ -5,9 +5,9 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 
-import { app } from "../firebase-config";
+import { app, db } from "../firebase-config";
 import { info1, info2, info4, info5 } from "../assets/Content/Content";
-import { useNavigate } from "react-router-dom";
+import { collection, getDocs } from "firebase/firestore";
 export const SiteContext = createContext({});
 
 const auth = getAuth(app);
@@ -15,6 +15,8 @@ const auth = getAuth(app);
 export const SiteContextProvider = ({ children }) => {
   //Project Storage
   // const { projects, setProject } = useProjects();
+  const projectData = collection(db, "projects");
+
   const onRegister = async (newUser) => {
     createUserWithEmailAndPassword(auth, newUser.email, newUser.password)
       .then(() => {
@@ -54,6 +56,26 @@ export const SiteContextProvider = ({ children }) => {
       });
   };
 
+  const fetchProjectData = async () => {
+    let projects;
+
+    try {
+      const data = await getDocs(projectData);
+
+      projects = data.docs.map((doc) => ({ ...doc.data() }));
+      console.log("success", projects);
+      return projects;
+    } catch (error) {
+      console.log("error:", error);
+
+      return error;
+    }
+  };
+
+  const test = "John Smith";
+  const [user, setUser] = useState(false);
+  const [logState, setLogState] = useState(false);
+
   return (
     <SiteContext.Provider
       value={{
@@ -68,6 +90,7 @@ export const SiteContextProvider = ({ children }) => {
         info2,
         info4,
         info5,
+        fetchProjectData,
       }}
     >
       {children}

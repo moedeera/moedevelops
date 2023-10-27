@@ -75,6 +75,13 @@
   display: flex;
   gap: 10px;
 }
+.item-icon {
+  display: flex;
+  gap: 5px;
+}
+.item-icon small {
+  color: grey;
+}
 
 /* Initially hide the child div */
 .item-detail-box .detail-box-overlay {
