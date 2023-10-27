@@ -7,6 +7,7 @@ import {
 
 import { app } from "../firebase-config";
 import { info1, info2, info4, info5 } from "../assets/Content/Content";
+import { useNavigate } from "react-router-dom";
 export const SiteContext = createContext({});
 
 const auth = getAuth(app);
@@ -27,7 +28,11 @@ export const SiteContextProvider = ({ children }) => {
       });
   };
 
-  const onLog = async (userInfo) => {
+  const test = "John Smith";
+  const [user, setUser] = useState(false);
+  const [logState, setLogState] = useState(false);
+
+  const onLog = async (userInfo, redirection, link) => {
     console.log(
       "on log called",
       "user info:",
@@ -40,16 +45,14 @@ export const SiteContextProvider = ({ children }) => {
         // Signed in
         console.log(userCredential.user);
         setLogState(true);
+        localStorage.setItem("logged", true);
+        redirection(link);
         // ...
       })
       .catch((error) => {
         console.log("error code:", error.code, "error message:", error.message);
       });
   };
-
-  const test = "John Smith";
-  const [user, setUser] = useState(false);
-  const [logState, setLogState] = useState(false);
 
   return (
     <SiteContext.Provider

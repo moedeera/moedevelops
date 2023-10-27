@@ -7,6 +7,25 @@
 }
 .content-login {
   border: 1px solid grey;
+  max-width: 600px;
+  margin: 0 auto;
+  height: 450px;
+  border-radius: 5px;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-login > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-login input {
+  width: 100%;
+  min-width: 20rem;
 }
 
 .content-login small {

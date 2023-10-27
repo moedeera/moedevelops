@@ -2,11 +2,13 @@ import { useContext, useState } from "react";
 import { SiteContext } from "../../Context/Context";
 import { getAuth } from "firebase/auth";
 import { app } from "../../firebase-config";
+import { useNavigate } from "react-router-dom";
 
-export const LoginForm = () => {
+export const LoginForm = ({ redirectTo }) => {
   const { user, setUser, logState, setLogState, onRegister, onLog } =
     useContext(SiteContext);
   const auth = getAuth(app);
+  const navigate = useNavigate();
 
   const [newUser, setNewUser] = useState({
     name: "",
@@ -32,11 +34,20 @@ export const LoginForm = () => {
 
   const [mode, setMode] = useState("login");
 
+  useState(() => {
+    const isUserLoggedIn = localStorage.getItem("logged");
+
+    console.log(isUserLoggedIn);
+    if (isUserLoggedIn) {
+      navigate(`${redirectTo}`);
+    }
+  }, []);
+
   return (
     <div className="content-login">
       {mode === "login" && (
         <div className="form">
-          <h1>Login Test</h1>
+          <h1>Login</h1>
 
           <div className="input-section">
             {" "}
@@ -55,7 +66,7 @@ export const LoginForm = () => {
             <div className="input-label">Password</div>
             <input
               name="name"
-              type="text"
+              type="password"
               value={logUser.password}
               onChange={(e) => {
                 onChangeHandler(e, "password", logUser, setLogUser);
@@ -65,7 +76,7 @@ export const LoginForm = () => {
           </div>
           <button
             onClick={() => {
-              onLog(logUser);
+              onLog(logUser, navigate, "/admin");
             }}
             className="btn"
           >
