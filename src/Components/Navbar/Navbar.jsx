@@ -24,8 +24,14 @@ export const Navbar = () => {
       <div className={mobileMenu ? "overlay" : ""}>
         <nav className="relative  p-3 h-24 mx-auto text-black w-full  md:p-6">
           <div className="flex items-center justify-between">
-            <div className="hidden md:block">
-              <h3 style={{ fontWeight: "900" }}>
+            <div className="hidden md:block navbar-logo">
+              <h3
+                style={{
+                  fontWeight: "600",
+                  fontFamily: "'Caveat', cursive",
+                  fontSize: "26px",
+                }}
+              >
                 <Link to={"/"}>
                   Develop<span className="text-primary">with</span>Moe
                 </Link>
@@ -48,9 +54,20 @@ export const Navbar = () => {
               </div>
 
               <div>
-                <h1 style={{ fontWeight: "900" }}>
-                  <Link to={"/"}>
-                    Moe<span className="text-primary">Develops</span>
+                <h1
+                  style={{
+                    fontWeight: "900",
+                    fontFamily: "font-family: 'Caveat', cursive;",
+                  }}
+                >
+                  <Link
+                    to={"/"}
+                    style={{
+                      fontFamily: "'Caveat', cursive",
+                      fontSize: "x-large",
+                    }}
+                  >
+                    Develop<span className="text-primary">with</span>Moe
                   </Link>
                 </h1>
               </div>

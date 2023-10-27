@@ -15,10 +15,15 @@ export const Footer = () => {
     <div className="footer ">
       <div className="upper-footer p-5">
         <div>
-          <h1 style={{ fontWeight: "900" }}>
+          <h1
+            style={{
+              fontWeight: "900",
+              fontFamily: "'Caveat', cursive",
+              fontSize: "28px",
+            }}
+          >
             <Link to={"/"}>
-              <span className="text-black">Moe</span>
-              <span className="text-primary">Develops</span>
+              Develop<span className="text-primary">with</span>Moe
             </Link>
           </h1>
         </div>
@@ -39,7 +44,7 @@ export const Footer = () => {
           <img src={mediumLogo} alt="medium" />
         </div>
       </div>
-      <div className="flex justify-center p-6"> © MoeDevelops 2023</div>
+      <div className="flex justify-center p-6"> © DevelopwithMoe 2023</div>
     </div>
   );
 };
