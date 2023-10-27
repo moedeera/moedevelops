@@ -30,10 +30,6 @@ export const SiteContextProvider = ({ children }) => {
       });
   };
 
-  const test = "John Smith";
-  const [user, setUser] = useState(false);
-  const [logState, setLogState] = useState(false);
-
   const onLog = async (userInfo, redirection, link) => {
     console.log(
       "on log called",
