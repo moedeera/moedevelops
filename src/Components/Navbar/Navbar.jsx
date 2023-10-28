@@ -1,23 +1,12 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { SiteContext } from "../../Context/Context";
 export const Navbar = () => {
   const [mobileMenu, showMobileMenu] = useState(false);
-
-  const menuItems = [
-    { id: 1, name: "Home", link: "/" },
-    { id: 2, name: "Portfolio", link: "/portfolio" },
-    { id: 3, name: "Contact", link: "/contact" },
-    { id: 4, name: "Services", link: "/services" },
-    { id: 5, name: "About", link: "/about" },
-  ];
-
-  const menuSectionItems = [
-    { id: 1, name: "Portfolio", link: "/portfolio" },
-    { id: 2, name: "Services", link: "/services" },
-    { id: 3, name: "About", link: "/about" },
-  ];
+  const { page, setPage, menuItems, menuSectionItems } =
+    useContext(SiteContext);
 
   return (
     <>
@@ -72,9 +61,17 @@ export const Navbar = () => {
                 </h1>
               </div>
             </div>
-            <div className="hidden md:flex gap-x-3.5">
-              {menuSectionItems.map((item) => (
-                <Link key={item.id} to={item.link}>
+            <div className="hidden md:flex gap-x-5">
+              {menuSectionItems?.map((item) => (
+                <Link
+                  key={item.id}
+                  to={item.link}
+                  style={{ transform: "all 0.5s ease-in-out" }}
+                  className={page === item.link ? "current-page" : ""}
+                  onClick={() => {
+                    setPage(item.link);
+                  }}
+                >
                   <p>{item.name}</p>
                 </Link>
               ))}
@@ -95,7 +92,7 @@ export const Navbar = () => {
                 : "mobilenav hidenav absolute w-full p-6 left-0 top-24 h-96 flex justify-evenly flex-col border md:hidden"
             }
           >
-            {menuItems.map((item) => (
+            {menuItems?.map((item) => (
               <>
                 <Link
                   to={`${item.link}`}

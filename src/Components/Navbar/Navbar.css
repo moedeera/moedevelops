@@ -23,6 +23,12 @@ nav {
   /* animation: 0.45s fadeInFromLeft; */
 }
 
+.current-page {
+  color: steelblue;
+
+  border-bottom: 1px solid steelblue;
+}
+
 .shownav {
   opacity: 1;
 }

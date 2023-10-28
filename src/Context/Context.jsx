@@ -71,6 +71,21 @@ export const SiteContextProvider = ({ children }) => {
   const test = "John Smith";
   const [user, setUser] = useState(false);
   const [logState, setLogState] = useState(false);
+  const [page, setPage] = useState("/");
+
+  const menuSectionItems = [
+    { id: 1, name: "Home", link: "/" },
+    { id: 1, name: "Portfolio", link: "/portfolio" },
+    { id: 2, name: "Services", link: "/services" },
+    { id: 3, name: "About", link: "/about" },
+  ];
+  const menuItems = [
+    { id: 1, name: "Home", link: "/" },
+    { id: 2, name: "Portfolio", link: "/portfolio" },
+    { id: 3, name: "Contact", link: "/contact" },
+    { id: 4, name: "Services", link: "/services" },
+    { id: 5, name: "About", link: "/about" },
+  ];
 
   return (
     <SiteContext.Provider
@@ -87,6 +102,10 @@ export const SiteContextProvider = ({ children }) => {
         info4,
         info5,
         fetchProjectData,
+        menuItems,
+        menuSectionItems,
+        page,
+        setPage,
       }}
     >
       {children}
