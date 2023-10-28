@@ -13,7 +13,7 @@ export const Landing = () => {
 
       <p>
         Whether it is an eCommerce website or a personal portfolio, find the
-        right solution for you.
+        right digital solution for you today.
       </p>
       <Link to={"/portfolio"}>
         <button className="btn">See Portfolio</button>
