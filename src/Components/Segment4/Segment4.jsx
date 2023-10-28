@@ -42,7 +42,7 @@ export const Segment4 = ({ info }) => {
       ref={componentRef}
     >
       <div className="segment-4-text">
-        <div className="segment-4-text-quote">{info.quote}</div>
+        <div className="segment-4-text-quote">"{info.quote}"</div>
         <div className="segment-4-text-author">
           <div className="segment-4-author-pic">
             <img src={author} alt="author" />
