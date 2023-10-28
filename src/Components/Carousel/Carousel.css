@@ -47,7 +47,7 @@
 }
 
 .slide-left {
-  animation: carousel 20s ease-in-out infinite;
+  animation: carouselMobile 40s ease-in-out infinite;
 }
 
 .item-info {
@@ -100,7 +100,28 @@
     transform: translateX(0%);
   }
 }
+@keyframes carouselMobile {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
 @media only screen and (min-width: 600px) {
+  .slide-left {
+    animation: carousel 20s ease-in-out infinite;
+  }
   .carousel {
     display: flex;
   }
