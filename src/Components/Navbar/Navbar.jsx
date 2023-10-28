@@ -64,7 +64,7 @@ export const Navbar = () => {
                     to={"/"}
                     style={{
                       fontFamily: "'Caveat', cursive",
-                      fontSize: "x-large",
+                      fontSize: "medium",
                     }}
                   >
                     Develop<span className="text-primary">with</span>Moe

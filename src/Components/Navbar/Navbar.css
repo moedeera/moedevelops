@@ -10,6 +10,7 @@ nav {
 }
 .navbar-logo {
   font-family: "Caveat", cursive !important;
+  font-size: small;
 }
 .navbar a {
   color: white;
