@@ -1,11 +1,7 @@
 import "./Carousel.css";
-import {
-  findImageSet,
-  imagesSorted,
-  portfolioImages,
-} from "../../assets/Portfolio/images";
+import { findImageSet, imagesSorted } from "../../assets/Portfolio/images";
 import { projectList } from "../../assets/Portfolio/projects";
-import { portImages } from "../../Pages/Portfolio/portfolioImages";
+
 import { Link } from "react-router-dom";
 
 export const Carousel = () => {

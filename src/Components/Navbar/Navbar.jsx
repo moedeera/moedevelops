@@ -57,7 +57,7 @@ export const Navbar = () => {
                 <h1
                   style={{
                     fontWeight: "900",
-                    fontFamily: "font-family: 'Caveat', cursive;",
+                    fontFamily: "Caveat', cursive",
                   }}
                 >
                   <Link
