@@ -37,7 +37,7 @@ export const Segment2 = ({ info }) => {
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateX(0)" : "translateX(20%)",
-        transition: "opacity 0.75s, transform 1s",
+        transition: "opacity 1.5s, transform 1s",
       }}
       ref={componentRef}
     >
