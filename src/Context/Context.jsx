@@ -72,6 +72,13 @@ export const SiteContextProvider = ({ children }) => {
   const [user, setUser] = useState(false);
   const [logState, setLogState] = useState(false);
   const [page, setPage] = useState("/");
+// import usePost() from "..../"
+
+
+  // const {getPost, makePosts} = usePosts()
+  // const {getUser, register, log} = usePosts()
+
+// useEffect(()=>{ checkIfUserLogged() },[])
 
   const menuSectionItems = [
     { id: 1, name: "Home", link: "/" },
@@ -86,6 +93,8 @@ export const SiteContextProvider = ({ children }) => {
     { id: 4, name: "Services", link: "/services" },
     { id: 5, name: "About", link: "/about" },
   ];
+
+// const [globalSTate, setGlobalState] = useState()
 
   return (
     <SiteContext.Provider
@@ -106,6 +115,7 @@ export const SiteContextProvider = ({ children }) => {
         menuSectionItems,
         page,
         setPage,
+        // get
       }}
     >
       {children}
