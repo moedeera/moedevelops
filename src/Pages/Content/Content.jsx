@@ -55,6 +55,7 @@ export const Content = () => {
           <div className="message">
             {messages?.map((msg) => (
               <div className="messages-box" key={msg.messages}>
+                <small className="data">{msg?.date}</small>
                 <div className="message-box-author">
                   <h3>Name:{msg.name}</h3>
                   <small>Email:{msg.email}</small>

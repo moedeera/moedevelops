@@ -62,10 +62,14 @@ export const Form = () => {
 
   const onSubmit = async () => {
     try {
+      const currentDate = new Date();
+      const currentDateTime = currentDate.toISOString();
+
       await addDoc(messageData, {
         name: msg.name,
         message: msg.message,
         email: msg.email,
+        date: currentDateTime,
       });
       setSent(true);
       setCount(count + 1);

@@ -26,7 +26,7 @@ export const Navbar = () => {
                 </Link>
               </h3>
             </div>
-            <div className="flex items-center gap-3.5 md:hidden ">
+            <div className="flex items-center gap-3.5 md:hidden sm-nav">
               <div
                 className=" cursor-pointer"
                 onClick={() => {
@@ -76,7 +76,7 @@ export const Navbar = () => {
                 </Link>
               ))}
             </div>
-            <div>
+            <div className="nav-contact-button">
               <h3 style={{ fontWeight: "900" }}>
                 <Link to={"/contact"} className="text-red">
                   <button className="btn">Contact</button>
