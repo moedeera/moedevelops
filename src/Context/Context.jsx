@@ -72,19 +72,18 @@ export const SiteContextProvider = ({ children }) => {
   const [user, setUser] = useState(false);
   const [logState, setLogState] = useState(false);
   const [page, setPage] = useState("/");
-// import usePost() from "..../"
-
+  // import usePost() from "..../"
 
   // const {getPost, makePosts} = usePosts()
   // const {getUser, register, log} = usePosts()
 
-// useEffect(()=>{ checkIfUserLogged() },[])
+  // useEffect(()=>{ checkIfUserLogged() },[])
 
   const menuSectionItems = [
     { id: 1, name: "Home", link: "/" },
-    { id: 1, name: "Portfolio", link: "/portfolio" },
-    { id: 2, name: "Services", link: "/services" },
-    { id: 3, name: "About", link: "/about" },
+    { id: 2, name: "Portfolio", link: "/portfolio" },
+    { id: 3, name: "Services", link: "/services" },
+    { id: 4, name: "About", link: "/about" },
   ];
   const menuItems = [
     { id: 1, name: "Home", link: "/" },
@@ -94,7 +93,7 @@ export const SiteContextProvider = ({ children }) => {
     { id: 5, name: "About", link: "/about" },
   ];
 
-// const [globalSTate, setGlobalState] = useState()
+  // const [globalSTate, setGlobalState] = useState()
 
   return (
     <SiteContext.Provider

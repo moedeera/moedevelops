@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 import { getStorage, ref } from "firebase/storage";
 // Follow this pattern to import other Firebase services
@@ -17,4 +18,17 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-export { app, db };
+export const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+
+const signInWithGoogle = async () => {
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+export { app, db, signInWithGoogle };

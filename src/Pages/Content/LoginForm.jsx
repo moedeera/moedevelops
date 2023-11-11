@@ -3,6 +3,7 @@ import { SiteContext } from "../../Context/Context";
 import { getAuth } from "firebase/auth";
 import { app } from "../../firebase-config";
 import { useNavigate } from "react-router-dom";
+import { signInWithGoogle } from "../../firebase-config";
 
 export const LoginForm = ({ redirectTo }) => {
   const { user, setUser, logState, setLogState, onRegister, onLog } =
@@ -48,6 +49,9 @@ export const LoginForm = ({ redirectTo }) => {
       {mode === "login" && (
         <div className="form">
           <h1>Login</h1>
+          <button className="btn btn-primary" onClick={signInWithGoogle}>
+            Sign in with Google
+          </button>
 
           <div className="input-section">
             {" "}
