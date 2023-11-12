@@ -26,6 +26,8 @@
   --headerSM: 32px;
   --headerMD: 48px;
   --headerLG: 56px;
+  --width: 95%;
+  --max-width: 1300px;
 }
 
 a {
