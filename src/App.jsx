@@ -15,6 +15,7 @@ import { Project } from "./Pages/Project/Project";
 import ScrollToTop from "./Components/Scroll/Scroll";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ErrorPage } from "./Pages/Error/Error";
+import { ProfilePage } from "./Pages/ProfilePage/ProfilePage";
 
 const client = new QueryClient();
 
@@ -33,6 +34,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/profile" element={<ProfilePage />} />
               <Route path="/admin" element={<Content />} />
               <Route path="*" element={<ErrorPage />} />
               <Route path="/portfolio/:project" element={<Project />} />
