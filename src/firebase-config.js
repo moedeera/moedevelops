@@ -27,24 +27,22 @@ const signInWithGoogle = async () => {
       const user = result.user;
       const displayName = user.displayName;
       const photoURL = user.photoURL;
+      const email = user.email;
 
       // Additional information from Firebase may include gender and age
       // These details are commonly not directly provided by Google Sign-In, but could be stored in Firebase Authentication custom claims or user metadata
 
       // You can customize this part based on where your additional user information is stored
 
-      // Example: Get additional information from custom claims
-      //const gender = user?.customClaims.gender || "Not specified";
-      // const age = user.customClaims.age || "Not specified";
-
       // Create an info object with extracted information
       const info = {
         name: displayName,
         pic: photoURL,
-        // age: age,
-        //  gender: gender,
+        email,
       };
-      console.log(result);
+
+      localStorage.setItem("user", JSON.stringify(info));
+      console.log(info);
     })
     .catch((error) => {
       console.log(error);

@@ -8,8 +8,21 @@ import {
 import { app, db } from "../firebase-config";
 import { info1, info2, info4, info5 } from "../assets/Content/Content";
 import { collection, getDocs } from "firebase/firestore";
+
+function getUserFromLocalStorage() {
+  // Check if "user" exists in local storage
+
+  const storedUser = localStorage.getItem("user");
+  console.log(storedUser);
+  return storedUser ? JSON.parse(storedUser) : null;
+  // Return the user if it exists, otherwise return null
+}
+
 export const SiteContext = createContext({});
 
+// Use the 'user' variable as needed
+const userInfo = getUserFromLocalStorage();
+console.log(userInfo);
 const auth = getAuth(app);
 // eslint-disable-next-line react/prop-types
 export const SiteContextProvider = ({ children }) => {
@@ -69,7 +82,7 @@ export const SiteContextProvider = ({ children }) => {
   };
 
   const test = "John Smith";
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(userInfo);
   const [logState, setLogState] = useState(false);
   const [page, setPage] = useState("/");
   // import usePost() from "..../"
