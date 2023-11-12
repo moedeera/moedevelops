@@ -48,13 +48,18 @@ export const Content = () => {
     <div className="page-container content-page">
       <h1>
         You are logged in
-        <div className="message">
+        <div className="messages-container">
           {messages?.map((msg) => (
             <div className="messages-box" key={msg.messages}>
-              <small className="data">{msg?.date}</small>
               <div className="message-box-author">
-                <h3>Name:{msg.name}</h3>
-                <small>Email:{msg.email}</small>
+                <div className="message-details">
+                  {" "}
+                  <h3>
+                    from: {msg.name}@{msg.email}
+                  </h3>
+                  <h3>{msg?.date}</h3>
+                  <h3></h3>
+                </div>
               </div>
               <div className="message-box-message">
                 {" "}
