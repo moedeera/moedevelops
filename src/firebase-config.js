@@ -3,6 +3,7 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 import { getStorage, ref } from "firebase/storage";
+
 // Follow this pattern to import other Firebase services
 // import { } from 'firebase/<service>';
 
@@ -21,32 +22,65 @@ const db = getFirestore(app);
 export const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
+// const signInWithGoogle = async () => {
+//   signInWithPopup(auth, provider)
+//     .then((result) => {
+//       const user = result.user;
+//       const displayName = user.displayName;
+//       const photoURL = user.photoURL;
+//       const email = user.email;
+
+//       const info = {
+//         name: displayName,
+//         pic: photoURL,
+//         email,
+//       };
+
+//       localStorage.setItem("user", JSON.stringify(info));
+//       console.log(info);
+//       return info;
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//       return null;
+//     });
+// };
+
+const functionG = (function2) => {
+  // function2.then(()=>{console.log('success')}).catch((err)=>{console.log(err) })
+  // code (value)
+
+  let g;
+  try {
+    g = function2;
+  } catch (error) {
+    console.log(error);
+    // value = constant
+  }
+  // code (value)
+};
+
 const signInWithGoogle = async () => {
-  signInWithPopup(auth, provider)
-    .then((result) => {
-      const user = result.user;
-      const displayName = user.displayName;
-      const photoURL = user.photoURL;
-      const email = user.email;
+  try {
+    const result = await signInWithPopup(auth, provider);
+    const user = result.user;
+    const displayName = user.displayName;
+    const photoURL = user.photoURL;
+    const email = user.email;
 
-      // Additional information from Firebase may include gender and age
-      // These details are commonly not directly provided by Google Sign-In, but could be stored in Firebase Authentication custom claims or user metadata
+    const info = {
+      name: displayName,
+      pic: photoURL,
+      email,
+    };
 
-      // You can customize this part based on where your additional user information is stored
-
-      // Create an info object with extracted information
-      const info = {
-        name: displayName,
-        pic: photoURL,
-        email,
-      };
-
-      localStorage.setItem("user", JSON.stringify(info));
-      console.log(info);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+    localStorage.setItem("user", JSON.stringify(info));
+    console.log(info);
+    return info;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
 };
 
 export { app, db, signInWithGoogle };

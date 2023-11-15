@@ -10,9 +10,9 @@ export const Login = () => {
   useEffect(() => {
     if (user) {
       navigate("/admin");
-      return;
+      // return;
     }
-  }, []);
+  }, [user, navigate]);
 
   return (
     <div className="page-container">

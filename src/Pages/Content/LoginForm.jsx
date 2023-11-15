@@ -6,8 +6,15 @@ import { useNavigate } from "react-router-dom";
 import { signInWithGoogle } from "../../firebase-config";
 
 export const LoginForm = ({ redirectTo }) => {
-  const { user, setUser, logState, setLogState, onRegister, onLog } =
-    useContext(SiteContext);
+  const {
+    user,
+    setUser,
+    logState,
+    setLogState,
+    onRegister,
+    onLog,
+    signInFunction,
+  } = useContext(SiteContext);
   const auth = getAuth(app);
   const navigate = useNavigate();
 
@@ -49,7 +56,12 @@ export const LoginForm = ({ redirectTo }) => {
       {mode === "login" && (
         <div className="form">
           <h1>Login</h1>
-          <button className="btn btn-primary" onClick={signInWithGoogle}>
+          <button
+            className="btn btn-primary"
+            onClick={() => {
+              signInFunction();
+            }}
+          >
             Sign in with Google
           </button>
 
