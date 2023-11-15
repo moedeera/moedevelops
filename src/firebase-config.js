@@ -1,6 +1,11 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
+  getIdToken,
+} from "firebase/auth";
 
 import { getStorage, ref } from "firebase/storage";
 
@@ -22,30 +27,6 @@ const db = getFirestore(app);
 export const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
-// const signInWithGoogle = async () => {
-//   signInWithPopup(auth, provider)
-//     .then((result) => {
-//       const user = result.user;
-//       const displayName = user.displayName;
-//       const photoURL = user.photoURL;
-//       const email = user.email;
-
-//       const info = {
-//         name: displayName,
-//         pic: photoURL,
-//         email,
-//       };
-
-//       localStorage.setItem("user", JSON.stringify(info));
-//       console.log(info);
-//       return info;
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//       return null;
-//     });
-// };
-
 const functionG = (function2) => {
   // function2.then(()=>{console.log('success')}).catch((err)=>{console.log(err) })
   // code (value)
@@ -57,13 +38,23 @@ const functionG = (function2) => {
     console.log(error);
     // value = constant
   }
+  return g;
   // code (value)
 };
+
+function returnHello() {
+  return "hello";
+}
+
+functionG(returnHello);
 
 const signInWithGoogle = async () => {
   try {
     const result = await signInWithPopup(auth, provider);
+
     const user = result.user;
+    const idToken = await user.getIdToken();
+
     const displayName = user.displayName;
     const photoURL = user.photoURL;
     const email = user.email;
@@ -72,6 +63,7 @@ const signInWithGoogle = async () => {
       name: displayName,
       pic: photoURL,
       email,
+      idToken,
     };
 
     localStorage.setItem("user", JSON.stringify(info));
