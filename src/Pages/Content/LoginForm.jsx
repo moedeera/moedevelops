@@ -69,7 +69,7 @@ export const LoginForm = ({ redirectTo }) => {
             {" "}
             <div className="input-label">Email</div>
             <input
-              name="name"
+              name="email"
               type="email"
               value={logUser.email}
               onChange={(e) => {
@@ -81,7 +81,7 @@ export const LoginForm = ({ redirectTo }) => {
           <div className="input-section">
             <div className="input-label">Password</div>
             <input
-              name="name"
+              name="password"
               type="password"
               value={logUser.password}
               onChange={(e) => {
