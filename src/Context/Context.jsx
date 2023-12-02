@@ -1,9 +1,10 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import { signInWithGoogle } from "../firebase-config";
 
 import { app, db } from "../firebase-config";
 import { info1, info2, info4, info5 } from "../assets/Content/Content";
@@ -11,7 +12,6 @@ import { collection, getDocs } from "firebase/firestore";
 
 function getUserFromLocalStorage() {
   // Check if "user" exists in local storage
-
   const storedUser = localStorage.getItem("user");
   console.log(storedUser);
   return storedUser ? JSON.parse(storedUser) : null;
@@ -114,7 +114,29 @@ export const SiteContextProvider = ({ children }) => {
     { id: 5, name: "About", link: "/about" },
   ];
 
+  const signInFunction = async () => {
+    const userInfo = await signInWithGoogle();
+
+    setUser(userInfo);
+  };
+
   // const [globalSTate, setGlobalState] = useState()
+
+  useEffect(() => {
+    const listener = window.addEventListener("storage", (event) => {
+      if (event.key === "user") {
+        try {
+          const parsed = JSON.parse(event.newValue);
+          setUser(parsed);
+        } catch {
+          console.error("Failed to parse user");
+        }
+      }
+    });
+    return () => {
+      window.removeEventListener("storage", listener);
+    };
+  }, []);
 
   return (
     <SiteContext.Provider
@@ -135,6 +157,7 @@ export const SiteContextProvider = ({ children }) => {
         menuSectionItems,
         page,
         setPage,
+        signInFunction,
         // get
       }}
     >

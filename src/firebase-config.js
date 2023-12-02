@@ -1,8 +1,14 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
+  getIdToken,
+} from "firebase/auth";
 
 import { getStorage, ref } from "firebase/storage";
+
 // Follow this pattern to import other Firebase services
 // import { } from 'firebase/<service>';
 
@@ -21,32 +27,52 @@ const db = getFirestore(app);
 export const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
+const functionG = (function2) => {
+  // function2.then(()=>{console.log('success')}).catch((err)=>{console.log(err) })
+  // code (value)
+
+  let g;
+  try {
+    g = function2;
+  } catch (error) {
+    console.log(error);
+    // value = constant
+  }
+  return g;
+  // code (value)
+};
+
+function returnHello() {
+  return "hello";
+}
+
+functionG(returnHello);
+
 const signInWithGoogle = async () => {
-  signInWithPopup(auth, provider)
-    .then((result) => {
-      const user = result.user;
-      const displayName = user.displayName;
-      const photoURL = user.photoURL;
-      const email = user.email;
+  try {
+    const result = await signInWithPopup(auth, provider);
 
-      // Additional information from Firebase may include gender and age
-      // These details are commonly not directly provided by Google Sign-In, but could be stored in Firebase Authentication custom claims or user metadata
+    const user = result.user;
+    const idToken = await user.getIdToken();
 
-      // You can customize this part based on where your additional user information is stored
+    const displayName = user.displayName;
+    const photoURL = user.photoURL;
+    const email = user.email;
 
-      // Create an info object with extracted information
-      const info = {
-        name: displayName,
-        pic: photoURL,
-        email,
-      };
+    const info = {
+      name: displayName,
+      pic: photoURL,
+      email,
+      idToken,
+    };
 
-      localStorage.setItem("user", JSON.stringify(info));
-      console.log(info);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+    localStorage.setItem("user", JSON.stringify(info));
+    console.log(info);
+    return info;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
 };
 
 export { app, db, signInWithGoogle };
