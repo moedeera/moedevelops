@@ -30,6 +30,7 @@
   grid-gap: 0px;
   border: 1px solid rgba(128, 128, 128, 0.25);
   border-radius: 10px;
+  transition: all 0.5s ease-in-out;
 }
 .item-detail-box {
   border-radius: 10px;
