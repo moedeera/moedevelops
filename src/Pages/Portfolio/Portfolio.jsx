@@ -96,15 +96,11 @@ export const Portfolio = () => {
               }}
               to={`/portfolio/${proj.slug}`}
               className="item-detail-box"
-              style={
-                proj.images
-                  ? { backgroundImage: `url(${proj.images[0]})` }
-                  : {
-                      backgroundImage: `url(${
-                        findImageSet(proj.ref, imagesSorted)[0]
-                      })`,
-                    }
-              }
+              style={{
+                backgroundImage: `url(${
+                  findImageSet(proj.ref, imagesSorted)[0]
+                })`,
+              }}
             >
               <div className="detail-box-overlay">
                 <h3>{proj.name}</h3>
