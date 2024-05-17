@@ -18,7 +18,6 @@ const Home = () => {
     <div className="page-container flex flex-col gap-5">
       <Landing />
       <Carousel />
-
       <Segment1 info={info1} />
       <Segment2 info={info2} />
       <Segment4 info={info4} />
