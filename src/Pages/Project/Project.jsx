@@ -49,10 +49,11 @@ export const Project = () => {
     { id: 2, name: "Shopify", image: iconImages[1] },
     { id: 3, name: "Squarespace", image: iconImages[2] },
     { id: 4, name: "React", image: iconImages[3] },
-    { id: 5, name: "Wordpress", image: iconImages[4] },
-    { id: 5, name: "CSS", image: iconImages[5] },
-    { id: 5, name: "HTML", image: iconImages[6] },
-    { id: 5, name: "Elementor", image: iconImages[7] },
+    { id: 6, name: "Wordpress", image: iconImages[4] },
+    { id: 7, name: "CSS", image: iconImages[5] },
+    { id: 8, name: "HTML", image: iconImages[6] },
+    { id: 9, name: "Elementor", image: iconImages[7] },
+    { id: 10, name: "Firebase", image: iconImages[8] },
   ];
 
   function findImageByName(name) {
@@ -111,21 +112,39 @@ export const Project = () => {
       <div className="project-images">
         <div
           className="project-gallery"
-          style={{
-            backgroundImage: `url(${findImageSet(proj.ref, imagesSorted)[0]})`,
-          }}
+          style={
+            proj.images
+              ? { backgroundImage: `url(${proj.images[0]})` }
+              : {
+                  backgroundImage: `url(${
+                    findImageSet(proj.ref, imagesSorted)[0]
+                  })`,
+                }
+          }
         ></div>
         <div
           className="project-gallery"
-          style={{
-            backgroundImage: `url(${findImageSet(proj.ref, imagesSorted)[1]})`,
-          }}
+          style={
+            proj.images
+              ? { backgroundImage: `url(${proj.images[1]})` }
+              : {
+                  backgroundImage: `url(${
+                    findImageSet(proj.ref, imagesSorted)[1]
+                  })`,
+                }
+          }
         ></div>
         <div
           className="project-gallery"
-          style={{
-            backgroundImage: `url(${findImageSet(proj.ref, imagesSorted)[2]})`,
-          }}
+          style={
+            proj.images
+              ? { backgroundImage: `url(${proj.images[2]})` }
+              : {
+                  backgroundImage: `url(${
+                    findImageSet(proj.ref, imagesSorted)[2]
+                  })`,
+                }
+          }
         ></div>
       </div>
     </div>

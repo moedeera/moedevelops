@@ -70,6 +70,7 @@ export const Navbar = () => {
                   className={page === item.link ? "current-page" : ""}
                   onClick={() => {
                     setPage(item.link);
+                    localStorage.setItem("page", item.link);
                   }}
                 >
                   <p>{item.name}</p>

@@ -18,6 +18,14 @@ function getUserFromLocalStorage() {
   // Return the user if it exists, otherwise return null
 }
 
+function getCurrentPage() {
+  let page = localStorage.getItem("page");
+  if (!page) {
+    return "/";
+  }
+  return page;
+}
+
 export const SiteContext = createContext({});
 
 // Use the 'user' variable as needed
@@ -80,11 +88,11 @@ export const SiteContextProvider = ({ children }) => {
       return error;
     }
   };
-
+  const currentPage = getCurrentPage();
   const test = "John Smith";
   const [user, setUser] = useState(userInfo);
   const [logState, setLogState] = useState(false);
-  const [page, setPage] = useState("/");
+  const [page, setPage] = useState(currentPage);
   // import usePost() from "..../"
 
   // const {getPost, makePosts} = usePosts()
