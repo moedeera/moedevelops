@@ -40,31 +40,31 @@ const projectList = [
     img3: null,
     color: "#F9C349",
   },
+  // {
+  //   id: 1,
+  //   slug: "superdonair",
+  //   ref: "superdonair",
+  //   orientation: "Restaurant",
+  //   title: "Super-Donair",
+  //   headerSummary: `A simple but highly ranked website that gets the job done.`,
+  //   stack: ["css", "html", "javascript"],
+  //   info: `
+  //   A Website built for the Super-Donair diner in Saskatoon,
+  //   This was built using CSS, HTML and JavaScript,
+  //   The client insisted on a simple design without any advanced features.
+  //   The website is maintained and updated manually by me.
+  //   The website is highly ranked in the google search algorithm and is the
+  //   first diner to show up for the  “donair search” in Saskatoon.
+  //   `,
+
+  //   link: "https://super-donair.com/",
+  //   img1: `${portfolioImages[9]}`,
+  //   img2: `${portfolioImages[10]}`,
+  //   img3: `${portfolioImages[11]}`,
+  //   color: "crimson",
+  // },
   {
     id: 1,
-    slug: "superdonair",
-    ref: "superdonair",
-    orientation: "Restaurant",
-    title: "Super-Donair",
-    headerSummary: `A simple but highly ranked website that gets the job done.`,
-    stack: ["css", "html", "javascript"],
-    info: `
-    A Website built for the Super-Donair diner in Saskatoon,
-    This was built using CSS, HTML and JavaScript,
-    The client insisted on a simple design without any advanced features.
-    The website is maintained and updated manually by me.    
-    The website is highly ranked in the google search algorithm and is the
-    first diner to show up for the  “donair search” in Saskatoon.
-    `,
-
-    link: "https://super-donair.com/",
-    img1: `${portfolioImages[9]}`,
-    img2: `${portfolioImages[10]}`,
-    img3: `${portfolioImages[11]}`,
-    color: "crimson",
-  },
-  {
-    id: 2,
     slug: "greenframe",
     ref: "greenframe",
     orientation: "Construction",
@@ -93,7 +93,7 @@ const projectList = [
     color: "#23A455",
   },
   {
-    id: 3,
+    id: 2,
     slug: "radiologymanual",
     ref: "radiology",
     orientation: "Radiology Website",
@@ -114,7 +114,7 @@ const projectList = [
     color: "black",
   },
   {
-    id: 4,
+    id: 3,
     slug: "deercoded",
     ref: "deercoded",
     orientation: "Coding Bootcamp",
@@ -131,7 +131,7 @@ const projectList = [
     color: "#256EFF",
   },
   {
-    id: 5,
+    id: 4,
     slug: "Vethalia",
     ref: "vethalia",
     orientation: "Natural Health Website",
