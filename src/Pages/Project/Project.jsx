@@ -7,6 +7,7 @@ import { findImageSet, imagesSorted } from "../../assets/Portfolio/images";
 import { db } from "../../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 import { Loading } from "../../Components/Loading/Loading";
+import { Gallery, Item } from "react-photoswipe-gallery";
 export const Project = () => {
   const { project } = useParams();
   const [currentProject, setCurrentProject] = useState(null);
@@ -19,7 +20,6 @@ export const Project = () => {
     const match = projects.find((project) => project.slug === name);
     if (match) {
       setCurrentProject(match);
-      console.log(name, "match :", match);
     } else {
       console.log("no match for", name, "from", projects);
     }
@@ -30,7 +30,7 @@ export const Project = () => {
       const data = await getDocs(projectData);
 
       const filteredData = data.docs.map((doc) => ({ ...doc.data() }));
-      console.log("success", filteredData);
+
       findProject(project, filteredData);
     } catch (error) {
       console.log("error:", error);
@@ -147,6 +147,32 @@ export const Project = () => {
           }
         ></div>
       </div>
+      {/* <Gallery>
+        {" "}
+        <div className="gallery-container">
+          {proj?.images?.map((image, index) => (
+            <Item
+              key={index}
+              original={image}
+              thumbnail={image}
+              width={"1000"}
+              height={"600"}
+              style={{ border: "1px solid green" }}
+            >
+              {({ ref, open }) => (
+                <img
+                  className="gallery-container-image"
+                  ref={ref}
+                  onClick={open}
+                  src={image}
+                  alt=""
+                  style={{ border: "1px solid red" }}
+                />
+              )}
+            </Item>
+          ))}
+        </div>
+      </Gallery> */}
     </div>
   );
 };

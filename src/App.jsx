@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import "photoswipe/dist/photoswipe.css";
 import HomePage from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import { Login } from "./Pages/Login/Login";
@@ -25,7 +26,6 @@ function App() {
       <SiteContextProvider>
         <Router>
           <Navbar />
-
           <ScrollToTop>
             <Routes>
               <Route path="/" element={<HomePage />} />
