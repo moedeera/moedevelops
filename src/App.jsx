@@ -20,12 +20,26 @@ import { ProfilePage } from "./Pages/ProfilePage/ProfilePage";
 import { TestPage } from "./Pages/TestingPage/TestPage";
 import Modal from "./Components/Modal/Modal";
 import Sample from "./Pages/Sample/Sample";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const client = new QueryClient();
 
 function App() {
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const modalShown = localStorage.getItem("modal-shown");
+
+    if (!modalShown) {
+      const timer = setTimeout(() => {
+        setShowModal(true);
+        localStorage.setItem("modal-shown", true);
+      }, 10000);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   return (
     <QueryClientProvider client={client}>
       <SiteContextProvider>
@@ -49,7 +63,9 @@ function App() {
               </Routes>
             </ScrollToTop>
             <Footer />
-            {showModal && <Modal />}
+            {showModal && (
+              <Modal showModal={showModal} setShowModal={setShowModal} />
+            )}
           </div>
         </Router>
       </SiteContextProvider>

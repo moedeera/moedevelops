@@ -98,7 +98,9 @@ export const Portfolio = () => {
               className="item-detail-box"
               style={{
                 backgroundImage: `url(${
-                  findImageSet(proj.ref, imagesSorted)[0]
+                  proj.images
+                    ? proj.images[0]
+                    : findImageSet(proj.ref, imagesSorted)[0]
                 })`,
               }}
             >

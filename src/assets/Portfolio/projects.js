@@ -147,6 +147,52 @@ const projectList = [
     link: "https://vethalia.com",
     color: "#256EFF",
   },
+  {
+    id: 5,
+    slug: "librumreader",
+    ref: "librumreader",
+    orientation: "Restaurant",
+    title: "Super-Donair",
+    headerSummary: `A simple but highly ranked website that gets the job done.`,
+    stack: ["css", "html", "javascript"],
+    info: `
+    A Website built for the Super-Donair diner in Saskatoon,
+    This was built using CSS, HTML and JavaScript,
+    The client insisted on a simple design without any advanced features.
+    The website is maintained and updated manually by me.
+    The website is highly ranked in the google search algorithm and is the
+    first diner to show up for the  “donair search” in Saskatoon.
+    `,
+
+    link: "https://super-donair.com/",
+    img1: `${portfolioImages[9]}`,
+    img2: `${portfolioImages[10]}`,
+    img3: `${portfolioImages[11]}`,
+    color: "goldenrod",
+  },
+  {
+    id: 6,
+    slug: "joeysdonair",
+    ref: "joeysdonair",
+    orientation: "Restaurant",
+    title: "Super-Donair",
+    headerSummary: `A simple but highly ranked website that gets the job done.`,
+    stack: ["css", "html", "javascript"],
+    info: `
+    A Website built for the Super-Donair diner in Saskatoon,
+    This was built using CSS, HTML and JavaScript,
+    The client insisted on a simple design without any advanced features.
+    The website is maintained and updated manually by me.
+    The website is highly ranked in the google search algorithm and is the
+    first diner to show up for the  “donair search” in Saskatoon.
+    `,
+
+    link: "https://super-donair.com/",
+    img1: `${portfolioImages[9]}`,
+    img2: `${portfolioImages[10]}`,
+    img3: `${portfolioImages[11]}`,
+    color: "crimson",
+  },
 ];
 
 export { projectList as projectList };
