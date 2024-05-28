@@ -1,0 +1,19 @@
+.modal-container {
+  background-color: rgba(128, 128, 128, 0.95);
+  padding-top: 100px;
+}
+.modal-component {
+  transition: all 0.35s ease-in-out;
+  background-color: white;
+  margin: 0 auto;
+  color: black;
+  height: max-content;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 4.5px 1.5px grey;
+}
+.modal-component textarea {
+  border: 1px solid grey;
+  width: 100%;
+}
