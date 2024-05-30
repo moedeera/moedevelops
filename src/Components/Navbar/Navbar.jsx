@@ -4,6 +4,8 @@ import "./Navbar.css";
 import { useContext, useState } from "react";
 import { SiteContext } from "../../Context/Context";
 import { getAnalytics, logEvent } from "firebase/analytics";
+//
+
 export const Navbar = () => {
   const [mobileMenu, showMobileMenu] = useState(false);
   const { page, setPage, menuItems, menuSectionItems } =

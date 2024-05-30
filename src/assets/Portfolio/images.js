@@ -26,7 +26,7 @@ import greenframe2 from "../../Pages/Portfolio/greenframe2.png";
 import librum_reader1 from "./librum_reader_main.png";
 import librum_reader2 from "./librum_reader_2.png";
 import librum_reader3 from "./librum_reader_3.png";
-import joeysdonair from "./joeysdonair1.jpg";
+import joeysdonair from "./joeysdonair3.jpg";
 // import * as natural from "natural";
 import { iconImages } from "../../Components/IconGallery/Icons";
 
