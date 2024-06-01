@@ -112,7 +112,7 @@ const Modal = ({ setShowModal }) => {
               interested in my services?
               <br /> If not, please share the reason why.
             </h3>
-            <div className="flex gap-2 items-center pb-4 pt-6">
+            <div className="flex gap-2 flex-wrap items-center pb-4 pt-6">
               <label className="">Email or Company (optional)</label>
               <input
                 type="name"
@@ -131,7 +131,7 @@ const Modal = ({ setShowModal }) => {
                     handleOnSubmit();
                   }}
                 >
-                  Still Interested
+                  Interested
                 </button>
                 <button
                   className="btn btn-neutral"
@@ -139,7 +139,7 @@ const Modal = ({ setShowModal }) => {
                     setNoInterest(true);
                   }}
                 >
-                  Not Interested
+                  No Thanks
                 </button>
               </div>
             )}

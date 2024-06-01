@@ -8,7 +8,7 @@
   margin: 0 auto;
   color: black;
   height: max-content;
-  max-height: 600px;
+  /* max-height: 800px; */
   width: 90%;
   max-width: 800px;
   border-radius: 10px;
@@ -17,4 +17,7 @@
 .modal-component textarea {
   border: 1px solid grey;
   width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
 }
