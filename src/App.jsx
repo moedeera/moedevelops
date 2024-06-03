@@ -27,18 +27,18 @@ const client = new QueryClient();
 function App() {
   const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    const modalShown = localStorage.getItem("modal-shown");
+  // useEffect(() => {
+  //   const modalShown = localStorage.getItem("modal-shown");
 
-    if (!modalShown) {
-      const timer = setTimeout(() => {
-        setShowModal(true);
-        localStorage.setItem("modal-shown", true);
-      }, 10000);
+  //   if (!modalShown) {
+  //     const timer = setTimeout(() => {
+  //       setShowModal(true);
+  //       localStorage.setItem("modal-shown", true);
+  //     }, 10000);
 
-      return () => clearTimeout(timer);
-    }
-  }, []);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, []);
 
   return (
     <QueryClientProvider client={client}>
