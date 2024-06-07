@@ -16,6 +16,7 @@ import {
 import { db } from "../../firebase-config";
 
 import { Loading } from "../../Components/Loading/Loading";
+import { Segment6 } from "../../Components/Segment6/Segment6";
 
 export const Portfolio = () => {
   const [projects, setProjects] = useState([]);
@@ -77,6 +78,11 @@ export const Portfolio = () => {
     return <Loading />;
   }
 
+  const segmentInfo = {
+    header: "Like What You See?",
+    hook: "Contact me today and you can have your own amazing website up and running in no time.",
+  };
+
   return (
     <div className="page-container portfolio-page">
       <h1>My Latest Works</h1>
@@ -126,6 +132,7 @@ export const Portfolio = () => {
             </div>
           ))}
       </div>
+      <Segment6 input={segmentInfo} />
     </div>
   );
 };
