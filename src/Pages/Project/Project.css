@@ -88,8 +88,9 @@
 }
 
 .project-gallery {
+  border: 2px solid red;
   height: 225px;
-  width: 100%;
+  /* width: 100%; */
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -127,7 +128,13 @@
   }
 
   .project-gallery {
-    background-position: cover;
+    background-size: cover;
+    background-position: top;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
   }
   .gallery-container {
     display: grid;
@@ -141,5 +148,11 @@
   .gallery-container-image {
     width: 100%;
     max-width: 500px;
+  }
+  .inspiration-image {
+    background-color: #f9c349;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
   }
 }

@@ -145,7 +145,11 @@ export const Project = () => {
                   })`,
                 }
           }
-        ></div>
+        >
+          {proj.inspiration && (
+            <div className="inspiration-image">Original Inspiration</div>
+          )}
+        </div>
       </div>
       {/* <Gallery>
         {" "}
