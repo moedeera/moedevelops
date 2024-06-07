@@ -1,5 +1,8 @@
 import "./Services.css";
 import { Segment2 } from "../../Components/Segment2/Segment2";
+import { Segment4 } from "../../Components/Segment4/Segment4";
+import { info4, info5 } from "../../assets/Content/Content";
+import { Segment5 } from "../../Components/Segment5/Segment5";
 
 export const Services = () => {
   const info2 = {
@@ -55,6 +58,8 @@ export const Services = () => {
   return (
     <div className="page-container">
       <Segment2 info={info2} />
+      <Segment5 info={info5} />
+      <Segment4 info={info4} />
     </div>
   );
 };
