@@ -27,27 +27,6 @@ const db = getFirestore(app);
 export const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
-const functionG = (function2) => {
-  // function2.then(()=>{console.log('success')}).catch((err)=>{console.log(err) })
-  // code (value)
-
-  let g;
-  try {
-    g = function2;
-  } catch (error) {
-    console.log(error);
-    // value = constant
-  }
-  return g;
-  // code (value)
-};
-
-function returnHello() {
-  return "hello";
-}
-
-functionG(returnHello);
-
 const signInWithGoogle = async () => {
   try {
     const result = await signInWithPopup(auth, provider);
