@@ -5,7 +5,7 @@ import { findImageSet, imagesSorted } from "../../assets/Portfolio/images";
 import "./Portfolio.css";
 
 import { Link } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   collection,
   doc,
@@ -14,19 +14,14 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { db } from "../../firebase-config";
-import { SiteContext } from "../../Context/Context";
-import { useQuery } from "@tanstack/react-query";
+
 import { Loading } from "../../Components/Loading/Loading";
+import { Segment6 } from "../../Components/Segment6/Segment6";
 
 export const Portfolio = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
-  // const { fetchProjectData } = useContext(SiteContext);
 
-  // const { data, isLoading, isError } = useQuery(["project"], () => {
-  //   return fetchProjectData();
-  // });
-  // console.log(data);
   const projectData = collection(db, "projects");
   const fetchProjectData = async () => {
     try {
@@ -83,51 +78,61 @@ export const Portfolio = () => {
     return <Loading />;
   }
 
+  const segmentInfo = {
+    header: "Like What You See?",
+    hook: "Contact me today and you can have your own amazing website up and running in no time.",
+  };
+
   return (
     <div className="page-container portfolio-page">
       <h1>My Latest Works</h1>
       {/* <Filter /> */}
       <div className="portfolio-container">
-        {projects.map((proj) => (
-          <div key={proj.id} className="portfolio-item">
-            <Link
-              onClick={() => {
-                updateViews(proj.projectId, proj.views);
-              }}
-              to={`/portfolio/${proj.slug}`}
-              className="item-detail-box"
-              style={{
-                backgroundImage: `url(${
-                  findImageSet(proj.ref, imagesSorted)[0]
-                })`,
-              }}
-            >
-              <div className="detail-box-overlay">
-                <h3>{proj.name}</h3>
-              </div>
-            </Link>
-
-            <div className="item-details-cta">
-              <small>{proj.orientation}</small>
-              <div className="item-icons-small">
-                <div className="item-icon">
-                  <small>{proj.views} </small> <img src={images[0]} alt="" />
+        {projects
+          .sort((a, b) => a.id - b.id)
+          .map((proj) => (
+            <div key={proj.id} className="portfolio-item">
+              <Link
+                onClick={() => {
+                  updateViews(proj.projectId, proj.views);
+                }}
+                to={`/portfolio/${proj.slug}`}
+                className="item-detail-box"
+                style={{
+                  backgroundImage: `url(${
+                    proj.images
+                      ? proj.images[0]
+                      : findImageSet(proj.ref, imagesSorted)[0]
+                  })`,
+                }}
+              >
+                <div className="detail-box-overlay">
+                  <h3>{proj.name}</h3>
                 </div>
-                <div className="item-icon">
-                  <small>{proj.likes} </small>{" "}
-                  <img
-                    onClick={() => {
-                      updateLikes(proj.projectId, proj.likes);
-                    }}
-                    src={images[2]}
-                    alt=""
-                  />
+              </Link>
+
+              <div className="item-details-cta">
+                <small>{proj.orientation}</small>
+                <div className="item-icons-small">
+                  <div className="item-icon">
+                    <small>{proj.views} </small> <img src={images[0]} alt="" />
+                  </div>
+                  <div className="item-icon">
+                    <small>{proj.likes} </small>{" "}
+                    <img
+                      onClick={() => {
+                        updateLikes(proj.projectId, proj.likes);
+                      }}
+                      src={images[2]}
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
+      <Segment6 input={segmentInfo} />
     </div>
   );
 };

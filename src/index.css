@@ -57,20 +57,26 @@ button {
 .btn {
   background-color: black;
   color: white;
-  padding: 10px 18px;
+  padding: 10px 15px;
   border-radius: 25px;
   font-family: "Source Serif 4", serif;
   font-weight: 500 !important;
-  font-size: medium;
+  font-size: small;
   letter-spacing: 0.75px;
   width: max-content;
   border: 1px solid rgba(128, 128, 128, 0.5);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.35s ease-in-out;
   margin-bottom: 10px;
 }
 .btn-alt {
   background-color: white;
   color: #0f0f0f;
+}
+.btn-success {
+  background-color: #275dad;
+}
+.btn-neutral {
+  background-color: grey;
 }
 
 .header-title {
@@ -122,6 +128,10 @@ textarea {
   .page-container {
     margin-top: 100px;
     margin-bottom: 150px;
+  }
+  .btn-success:hover,
+  .btn-neutral:hover {
+    background-color: green;
   }
 }
 

@@ -10,15 +10,15 @@ import { SiteContext } from "../../Context/Context";
 import { Segment4 } from "../../Components/Segment4/Segment4";
 import { Segment5 } from "../../Components/Segment5/Segment5";
 import { Segment6 } from "../../Components/Segment6/Segment6";
+import Modal from "../../Components/Modal/Modal";
 
 const Home = () => {
   const { test, info1, info2, info4, info5 } = useContext(SiteContext);
   console.log(test);
   return (
-    <div className="page-container flex flex-col gap-5">
+    <div className="page-container flex flex-col gap-5 ">
       <Landing />
       <Carousel />
-
       <Segment1 info={info1} />
       <Segment2 info={info2} />
       <Segment4 info={info4} />

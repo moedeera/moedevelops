@@ -1,4 +1,5 @@
 import { Segment1 } from "../../Components/Segment1/Segment1";
+import { Segment6 } from "../../Components/Segment6/Segment6";
 // import transition from "../../Transition";
 
 const About = () => {
@@ -14,6 +15,7 @@ const About = () => {
   return (
     <div className="page-container">
       <Segment1 info={info} />
+      <Segment6 />
     </div>
   );
 };

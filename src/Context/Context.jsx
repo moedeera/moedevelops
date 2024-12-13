@@ -13,7 +13,7 @@ import { collection, getDocs } from "firebase/firestore";
 function getUserFromLocalStorage() {
   // Check if "user" exists in local storage
   const storedUser = localStorage.getItem("user");
-  console.log(storedUser);
+
   return storedUser ? JSON.parse(storedUser) : null;
   // Return the user if it exists, otherwise return null
 }
@@ -30,7 +30,7 @@ export const SiteContext = createContext({});
 
 // Use the 'user' variable as needed
 const userInfo = getUserFromLocalStorage();
-console.log(userInfo);
+
 const auth = getAuth(app);
 // eslint-disable-next-line react/prop-types
 export const SiteContextProvider = ({ children }) => {

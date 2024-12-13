@@ -26,7 +26,7 @@ import greenframe2 from "../../Pages/Portfolio/greenframe2.png";
 import librum_reader1 from "./librum_reader_main.png";
 import librum_reader2 from "./librum_reader_2.png";
 import librum_reader3 from "./librum_reader_3.png";
-
+import joeysdonair from "./joeysdonair3.jpg";
 // import * as natural from "natural";
 import { iconImages } from "../../Components/IconGallery/Icons";
 
@@ -76,6 +76,16 @@ const imagesSorted = [
   {
     id: "librumreader",
     images: [librum_reader1, librum_reader2, librum_reader3],
+  },
+  {
+    id: "librumreader",
+    images: [
+      "https://firebasestorage.googleapis.com/v0/b/librum-bb036.appspot.com/o/images%2Flibrum_reader_main.png?alt=media&token=de940014-fe24-4ceb-ab55-58f8f60fc850",
+    ],
+  },
+  {
+    id: "joeysdonair",
+    images: [joeysdonair],
   },
   { id: "icons", images: iconImages },
   { id: "", images: [] },

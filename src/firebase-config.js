@@ -1,12 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import {
-  getAuth,
-  GoogleAuthProvider,
-  signInWithPopup,
-  getIdToken,
-} from "firebase/auth";
-
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getAnalytics, logEvent } from "firebase/analytics";
 import { getStorage, ref } from "firebase/storage";
 
 // Follow this pattern to import other Firebase services
@@ -26,6 +21,7 @@ const db = getFirestore(app);
 
 export const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
+const analytics = getAnalytics(app);
 
 const signInWithGoogle = async () => {
   try {
@@ -54,4 +50,4 @@ const signInWithGoogle = async () => {
   }
 };
 
-export { app, db, signInWithGoogle };
+export { app, db, signInWithGoogle, logEvent };

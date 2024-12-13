@@ -34,50 +34,58 @@ export const Carousel = () => {
     };
   }, [hasAnimated]);
 
-  return (
-    <div
-      style={{
-        opacity: isVisible ? 1 : 0,
+  const [carousel, serCarousel] = useState(false);
 
-        transition: "opacity 1.5s",
-      }}
-      ref={componentRef}
-    >
-      <div className={`carousel slide-left`}>
-        {projectList.map((item) => (
-          <Link
-            to={`portfolio/${item.slug}`}
-            key={item.id}
-            className={`carousel-item `}
-            style={{
-              backgroundImage: `url("${
-                findImageSet(item.ref, imagesSorted)[0]
-              }")`,
-            }}
-          >
-            <div
-              className="item-backdrop"
-              style={{
-                backgroundColor: `${item.color}`,
-                position: "absolute",
-                height: "100%",
-                width: "100%",
-                zIndex: "-1",
-                opacity: "0.15",
-              }}
-            ></div>
-            <div
-              className="item-wallpaper"
-              style={{
-                backgroundImage: `url("${
-                  findImageSet(item.ref, imagesSorted)[0]
-                }")`,
-              }}
-            ></div>
-            <div className="item-info"></div>
-          </Link>
-        ))}
-      </div>
-    </div>
+  return (
+    <>
+      {carousel ? (
+        <></>
+      ) : (
+        <div
+          style={{
+            opacity: isVisible ? 1 : 0,
+
+            transition: "opacity 1.5s",
+          }}
+          ref={componentRef}
+        >
+          <div className={`carousel slide-left`}>
+            {projectList.map((item) => (
+              <Link
+                to={`portfolio/${item.slug}`}
+                key={item.id}
+                className={`carousel-item `}
+                style={{
+                  backgroundImage: `url("${
+                    findImageSet(item.ref, imagesSorted)[0]
+                  }")`,
+                }}
+              >
+                <div
+                  className="item-backdrop"
+                  style={{
+                    backgroundColor: `${item.color}`,
+                    position: "absolute",
+                    height: "100%",
+                    width: "100%",
+                    zIndex: "-1",
+                    opacity: "0.15",
+                  }}
+                ></div>
+                <div
+                  className="item-wallpaper"
+                  style={{
+                    backgroundImage: `url("${
+                      findImageSet(item.ref, imagesSorted)[0]
+                    }")`,
+                  }}
+                ></div>
+                <div className="item-info"></div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
   );
 };

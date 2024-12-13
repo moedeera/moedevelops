@@ -54,11 +54,12 @@ const segment5info = [
   },
   {
     id: 2,
-    small: "My Latest Blog",
-    header: "Designing Real Estate Websites",
-    text: "What are the keys to a good real estate website? find out in my latest blog.",
+    small: "Need Adjustments?",
+    header: "Whether it's Hosting, Ads, Analytics, AI or Shopify Stores....",
+
+    text: "Websites involve a lot of moving parts. No matter which part you need work on, I can help you.",
     button1: "Read more",
-    link1: "/",
+    link1: "/contact",
     color: "#ff8be7",
   },
 ];

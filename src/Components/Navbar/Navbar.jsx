@@ -3,10 +3,20 @@ import "./Navbar.css";
 
 import { useContext, useState } from "react";
 import { SiteContext } from "../../Context/Context";
+import { getAnalytics, logEvent } from "firebase/analytics";
+//
+
 export const Navbar = () => {
   const [mobileMenu, showMobileMenu] = useState(false);
   const { page, setPage, menuItems, menuSectionItems } =
     useContext(SiteContext);
+
+  const handleClick = () => {
+    logEvent(getAnalytics, "button_click", {
+      button_id: "contact-me",
+    });
+    // Add any other actions you want to perform on button click
+  };
 
   return (
     <>
@@ -80,7 +90,9 @@ export const Navbar = () => {
             <div className="nav-contact-button">
               <h3 style={{ fontWeight: "900" }}>
                 <Link to={"/contact"} className="text-red">
-                  <button className="btn">Contact</button>
+                  <button className="btn" id="contact_me">
+                    Contact
+                  </button>
                 </Link>
               </h3>
             </div>
