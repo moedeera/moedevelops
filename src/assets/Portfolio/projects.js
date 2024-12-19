@@ -194,7 +194,7 @@ const projectList = [
     color: "crimson",
   },
   {
-    id: 8,
+    id: 7,
     slug: "sasksoccerhub",
     ref: "sasksoccerhub",
     orientation: "Recreational Sporting Website",
