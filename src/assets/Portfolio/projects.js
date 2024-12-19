@@ -193,6 +193,25 @@ const projectList = [
     img3: `${portfolioImages[11]}`,
     color: "crimson",
   },
+  {
+    id: 8,
+    slug: "sasksoccerhub",
+    ref: "sasksoccerhub",
+    orientation: "Recreational Sporting Website",
+    title: "SaskSoccerHub",
+    headerSummary: `A simple but highly ranked website that gets the job done.`,
+    stack: ["css", "html", "javascript"],
+    info: `
+    "A website dedicated to everything soccer in the city of saskatoon. Everything from local leagues to tournaments to casual meetups."
+
+    `,
+
+    link: "https://www.sasksoccerhub.ca",
+    img1: `${portfolioImages[9]}`,
+    img2: `${portfolioImages[10]}`,
+    img3: `${portfolioImages[11]}`,
+    color: "#169873",
+  },
 ];
 
 export { projectList as projectList };
