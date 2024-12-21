@@ -7,7 +7,8 @@ import { findImageSet, imagesSorted } from "../../assets/Portfolio/images";
 import { db } from "../../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 import { Loading } from "../../Components/Loading/Loading";
-import { Gallery, Item } from "react-photoswipe-gallery";
+import ImageResizer from "./ImageResize";
+
 export const Project = () => {
   const { project } = useParams();
   const [currentProject, setCurrentProject] = useState(null);
@@ -54,6 +55,8 @@ export const Project = () => {
     { id: 8, name: "HTML", image: iconImages[6] },
     { id: 9, name: "Elementor", image: iconImages[7] },
     { id: 10, name: "Firebase", image: iconImages[8] },
+    { id: 11, name: "Tailwind", image: iconImages[9] },
+    { id: 12, name: "NextJS", image: iconImages[10] },
   ];
 
   function findImageByName(name) {
@@ -79,7 +82,10 @@ export const Project = () => {
     <div className="page-container project">
       <div className="project-header">
         <div className="project-header-text">
-          <small>{proj.orientation}</small>
+          <small>
+            <Link to={"/portfolio"}>Portfolio {">"} </Link>
+            {proj.orientation}
+          </small>
           <h1>
             <span style={{ color: `${proj.color}` }}>{proj.title}|</span>{" "}
             {proj.headerSummary}
@@ -151,6 +157,11 @@ export const Project = () => {
           )}
         </div>
       </div>
+      <ImageResizer
+        imageUrl={`url("${findImageSet(proj.ref, imagesSorted)[2]}")`}
+      />
+      <div> item</div>
+
       {/* <Gallery>
         {" "}
         <div className="gallery-container">

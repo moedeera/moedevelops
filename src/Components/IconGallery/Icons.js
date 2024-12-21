@@ -7,6 +7,8 @@ import css from "./css.png";
 import html from "./html.png";
 import elementor from "./elementor.png";
 import firebase from "./firebase.png";
+import tailwind from "./tailwindcss.png";
+import nextjs from "./nextjs.png";
 
 const icons = [
   js,
@@ -18,6 +20,8 @@ const icons = [
   html,
   elementor,
   firebase,
+  tailwind,
+  nextjs,
 ];
 
 export { icons as iconImages };

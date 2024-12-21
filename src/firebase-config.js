@@ -2,7 +2,6 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { getAnalytics, logEvent } from "firebase/analytics";
-import { getStorage, ref } from "firebase/storage";
 
 // Follow this pattern to import other Firebase services
 // import { } from 'firebase/<service>';

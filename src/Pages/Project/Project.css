@@ -128,7 +128,7 @@
   }
 
   .project-gallery {
-    background-size: cover;
+    background-size: contain;
     background-position: top;
     height: 350px;
     display: flex;
