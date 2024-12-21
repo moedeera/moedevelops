@@ -157,10 +157,6 @@ export const Project = () => {
           )}
         </div>
       </div>
-      <ImageResizer
-        imageUrl={`url("${findImageSet(proj.ref, imagesSorted)[2]}")`}
-      />
-      <div> item</div>
 
       {/* <Gallery>
         {" "}
